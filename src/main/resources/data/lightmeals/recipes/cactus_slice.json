@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "block": "minecraft:cactus"
+      "item": "minecraft:cactus"
     }
   ],
   "result": {

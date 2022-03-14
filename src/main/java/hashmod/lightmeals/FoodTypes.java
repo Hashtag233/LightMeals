@@ -11,6 +11,8 @@ public class FoodTypes {
     public static final Food COOKED_CACTUS_SLICE = (new Food.Builder()).hunger(3).saturation(0.3F).build();
     public static final Food CACTUS_FRUIT = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food HONEY_DIPPER = (new Food.Builder()).hunger(4).saturation(0.4F).build();
+    public static final Food COOKED_MUSHROOM = (new Food.Builder()).hunger(3).saturation(0.3F).build();
+    public static final Food CHOCOLATE_BAR = (new Food.Builder()).hunger(8).saturation(1.0F).build();
 
     //public static final Food CARROT_SOUP = (new Food.Builder()).hunger(8).saturation(0.8F).build();
 }

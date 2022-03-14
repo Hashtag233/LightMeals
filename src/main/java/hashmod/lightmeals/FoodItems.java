@@ -16,6 +16,8 @@ public class FoodItems {
     public static final RegistryObject<Item> COOKED_CACTUS_SLICE = ITEMS.register("cooked_cactus_slice", () -> new BasicFoodItem(FoodTypes.COOKED_CACTUS_SLICE));
     public static final RegistryObject<Item> CACTUS_FRUIT = ITEMS.register("cactus_fruit", () -> new BasicFoodItem(FoodTypes.CACTUS_FRUIT));
     public static final RegistryObject<Item> HONEY_DIPPER = ITEMS.register("honey_dipper", HoneyDipperItem::new);
+    public static final RegistryObject<Item> COOKED_MUSHROOM = ITEMS.register("cooked_mushroom", () -> new BasicFoodItem(FoodTypes.COOKED_MUSHROOM));
+    public static final RegistryObject<Item> CHOCOLATE_BAR = ITEMS.register("chocolate_bar", () -> new BasicFoodItem(FoodTypes.CHOCOLATE_BAR));
 
     //public static final RegistryObject<Item> CARROT_SOUP = ITEMS.register("carrot_soup", () -> new BasicFoodItem(FoodTypes.CARROT_SOUP, true));
 }
