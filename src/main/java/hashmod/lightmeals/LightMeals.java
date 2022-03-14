@@ -39,8 +39,8 @@ public class LightMeals {
 
     private void onCommonSetup(final FMLCommonSetupEvent event) {
 
-        //addDrop(SquidEntity.class, FoodItems.SQUID.get(), FoodItems.COOKED_SQUID.get(), 2);
-        //addDrop(HorseEntity.class, FoodItems.HORSE_MEAT.get(), FoodItems.COOKED_HORSE_MEAT.get(), 3, true);
+        addDrop(SquidEntity.class, FoodItems.RAW_SQUID.get(), FoodItems.COOKED_SQUID.get(), 2);
+        addDrop(HorseEntity.class, FoodItems.HORSE_MEAT.get(), FoodItems.COOKED_HORSE_MEAT.get(), 3, true);
         //addDrop(BatEntity.class, FoodItems.BAT_WING.get(), FoodItems.COOKED_BAT_WING.get(), 1);
         //addDrop(WolfEntity.class, FoodItems.WOLF_MEAT.get(), FoodItems.COOKED_WOLF_MEAT.get(), 2, true);
         //addDrop(OcelotEntity.class, FoodItems.OCELOT_MEAT.get(), FoodItems.COOKED_OCELOT_MEAT.get(), 1, true);
