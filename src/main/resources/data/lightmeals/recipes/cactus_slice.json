@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "block": "minecraft:cactus"
+    }
+  ],
+  "result": {
+    "item": "lightmeals:cactus_slice",
+    "count": 3
+  }
+}
