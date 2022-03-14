@@ -26,11 +26,7 @@ public class BasicFoodItem extends Item {
 
     @Override
     public int getUseDuration(ItemStack stack) {
-        if (Objects.requireNonNull(stack.getItem()).equals(FoodItems.JELLY.get())) {
-            return 64;
-        } else {
-            return super.getUseDuration(stack);
-        }
+        return super.getUseDuration(stack);
     }
 
     @Override
