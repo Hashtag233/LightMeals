@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "lightmeals:bacon"
+  },
+  "result": "lightmeals:crispy_bacon",
+  "experience": 0.35,
+  "cookingtime": 100
+}

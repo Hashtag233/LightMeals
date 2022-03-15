@@ -19,7 +19,7 @@ public class FoodTypes {
     public static final Food RAW_GLOW_SQUID = (new Food.Builder()).hunger(1).saturation(0.2F).effect(new EffectInstance(Effects.GLOWING, 400, 0), 1F).build();
     public static final Food COOKED_SQUID = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food BACON = (new Food.Builder()).hunger(1).saturation(0.2F).meat().fastToEat().build();
-    public static final Food COOKED_BACON = (new Food.Builder()).hunger(4).saturation(0.4F).meat().fastToEat().build();
+    public static final Food CRISPY_BACON = (new Food.Builder()).hunger(5).saturation(0.5F).meat().fastToEat().build();
     public static final Food HORSE_MEAT = (new Food.Builder()).hunger(3).saturation(0.3F).meat().build();
     public static final Food COOKED_HORSE_MEAT = (new Food.Builder()).hunger(8).saturation(0.8F).meat().build();
 
