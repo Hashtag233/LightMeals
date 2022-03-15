@@ -21,9 +21,12 @@ public class FoodItems {
     public static final RegistryObject<Item> RAW_EGG = ITEMS.register("raw_egg", () -> new BasicFoodItem(FoodTypes.RAW_EGG));
     public static final RegistryObject<Item> FRIED_EGG = ITEMS.register("fried_egg", () -> new BasicFoodItem(FoodTypes.FRIED_EGG));
     public static final RegistryObject<Item> RAW_SQUID = ITEMS.register("raw_squid", () -> new BasicFoodItem(FoodTypes.RAW_SQUID));
+    public static final RegistryObject<Item> RAW_GLOW_SQUID = ITEMS.register("raw_glow_squid", () -> new BasicFoodItem(FoodTypes.RAW_GLOW_SQUID));
     public static final RegistryObject<Item> COOKED_SQUID = ITEMS.register("cooked_squid", () -> new BasicFoodItem(FoodTypes.COOKED_SQUID));
     public static final RegistryObject<Item> HORSE_MEAT = ITEMS.register("horse_meat", () -> new BasicFoodItem(FoodTypes.HORSE_MEAT));
     public static final RegistryObject<Item> COOKED_HORSE_MEAT = ITEMS.register("cooked_horse_meat", () -> new BasicFoodItem(FoodTypes.COOKED_HORSE_MEAT));
 
     public static final RegistryObject<Item> CARROT_SOUP = ITEMS.register("carrot_soup", () -> new BasicFoodItem(FoodTypes.CARROT_SOUP, true));
+    public static final RegistryObject<Item> POTATO_SOUP = ITEMS.register("potato_soup", () -> new BasicFoodItem(FoodTypes.POTATO_SOUP, true));
+    public static final RegistryObject<Item> KELP_SOUP = ITEMS.register("kelp_soup", () -> new BasicFoodItem(FoodTypes.KELP_SOUP, true));
 }
