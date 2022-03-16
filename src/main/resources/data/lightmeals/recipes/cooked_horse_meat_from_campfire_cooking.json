@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:campfire_cooking",
-  "ingredient": {
-    "item": "lightmeals:horse_meat"
-  },
-  "result": "lightmeals:cooked_horse_meat",
-  "experience": 0.35,
-  "cookingtime": 600
-}
