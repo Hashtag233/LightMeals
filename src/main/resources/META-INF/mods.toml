@@ -1,20 +1,18 @@
 modLoader="javafml"
 loaderVersion="[34,)"
-license="All rights reserved"
+license="MIT License"
 issueTrackerURL="http://my.issue.tracker/"
 [[mods]]
 modId="lightmeals"
 version="0.1"
-displayName="Example Mod"
-updateJSONURL="http://myurl.me/"
-displayURL="http://example.com/"
+displayName="Light Meals"
+updateJSONURL="https://gitee.com/hashtag233/mc-mod-services/raw/master/light-meals-upd.json"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/light-meals"
 logoFile="examplemod.png"
-credits="Thanks for this example mod goes to Java"
-authors="Love, Cheese and small house plants"
+credits="All credit to Lellson8 for open sourcing his Food Expansion and the full permission. "
+authors="Hashtag233, Ender_Ruier"
 description='''
-This is a long form description of the mod. You can write whatever you want here
-Have some lorem ipsum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sagittis luctus odio eu tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque volutpat ligula eget lacus auctor sagittis. In hac habitasse platea dictumst. Nunc gravida elit vitae sem vehicula efficitur. Donec mattis ipsum et arcu lobortis, eleifend sagittis sem rutrum. Cras pharetra quam eget posuere fermentum. Sed id tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Add numerous foods within the vanilla framework.
 '''
 [[dependencies.lightmeals]]
     modId="minecraft"

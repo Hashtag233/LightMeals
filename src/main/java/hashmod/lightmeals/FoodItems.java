@@ -30,5 +30,8 @@ public class FoodItems {
 
     public static final RegistryObject<Item> CARROT_SOUP = ITEMS.register("carrot_soup", () -> new BasicFoodItem(FoodTypes.CARROT_SOUP, true));
     public static final RegistryObject<Item> POTATO_SOUP = ITEMS.register("potato_soup", () -> new BasicFoodItem(FoodTypes.POTATO_SOUP, true));
+    public static final RegistryObject<Item> PUMPKIN_SOUP = ITEMS.register("pumpkin_soup", () -> new BasicFoodItem(FoodTypes.PUMPKIN_SOUP, true));
     public static final RegistryObject<Item> KELP_SOUP = ITEMS.register("kelp_soup", () -> new BasicFoodItem(FoodTypes.KELP_SOUP, true));
+    public static final RegistryObject<Item> BONE_BROTH = ITEMS.register("bone_broth", () -> new BasicFoodItem(FoodTypes.BONE_BROTH, true));
+    public static final RegistryObject<Item> VEGGIE_SALAD = ITEMS.register("veggie_salad", () -> new BasicFoodItem(FoodTypes.VEGGIE_SALAD, true));
 }

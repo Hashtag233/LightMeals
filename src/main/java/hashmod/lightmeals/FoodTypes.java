@@ -25,5 +25,8 @@ public class FoodTypes {
 
     public static final Food CARROT_SOUP = (new Food.Builder()).hunger(8).saturation(0.8F).build();
     public static final Food POTATO_SOUP = (new Food.Builder()).hunger(3).saturation(0.4F).build();
+    public static final Food PUMPKIN_SOUP = (new Food.Builder()).hunger(6).saturation(0.6F).build();
     public static final Food KELP_SOUP = (new Food.Builder()).hunger(3).saturation(0.3F).build();
+    public static final Food BONE_BROTH = (new Food.Builder()).hunger(1).saturation(0.2F).effect(new EffectInstance(Effects.WEAKNESS, 600, 0), 1F).build();
+    public static final Food VEGGIE_SALAD = (new Food.Builder()).hunger(13).saturation(1F).build();
 }
