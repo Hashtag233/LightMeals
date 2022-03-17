@@ -1,12 +1,15 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mm"
+  ],
+  "key": {
+    "m": {
       "item": "minecraft:porkchop"
     }
-  ],
+  },
   "result": {
     "item": "lightmeals:bacon",
-    "count": 2
+    "count": 4
   }
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lightmeals:raw_chocolate"
+  },
+  "result": "lightmeals:hot_chocolate",
+  "experience": 0.35,
+  "cookingtime": 200
+}
