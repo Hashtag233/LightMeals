@@ -15,7 +15,7 @@ public class BasicFoodItem extends Item {
     private final boolean isDrink;
 
     public BasicFoodItem(Food foodType, boolean isSoup, boolean isDrink) {
-        super(new Item.Properties().food(foodType).group(LightMeals.ITEM_GROUP).maxStackSize(isSoup || isDrink ? 1 : 64));
+        super(new Item.Properties().food(foodType).group(LightMeals.ITEM_GROUP).maxStackSize(isSoup ? 1 : 64));
         this.isSoup = isSoup;
         this.isDrink = isDrink;
     }
@@ -45,7 +45,15 @@ public class BasicFoodItem extends Item {
                 return new ItemStack(Items.BOWL);
             }
             if (isDrink) {
-                return new ItemStack(Items.GLASS_BOTTLE);
+                if (stack.isEmpty()) {
+                    return new ItemStack(Items.GLASS_BOTTLE);
+                } else {
+                    ItemStack itemstack = new ItemStack(Items.GLASS_BOTTLE);
+                    PlayerEntity playerentity = (PlayerEntity)entityLiving;
+                    if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
+                        playerentity.dropItem(itemstack, false);
+                    }
+                }
             }
         }
         return item;

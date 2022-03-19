@@ -2,6 +2,7 @@ package hashmod.lightmeals;
 
 import hashmod.lightmeals.items.BasicFoodItem;
 import hashmod.lightmeals.items.BasicItem;
+import hashmod.lightmeals.items.ChorusFruitJuiceItem;
 import hashmod.lightmeals.items.HoneyDipperItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
@@ -14,6 +15,8 @@ public class FoodItems {
     public static final RegistryObject<Item> CACTUS_FRUIT = ITEMS.register("cactus_fruit", () -> new BasicFoodItem(FoodTypes.CACTUS_FRUIT));
     public static final RegistryObject<Item> HONEY_DIPPER = ITEMS.register("honey_dipper", HoneyDipperItem::new);
     public static final RegistryObject<Item> CHOCOLATE_BAR = ITEMS.register("chocolate_bar", () -> new BasicFoodItem(FoodTypes.CHOCOLATE_BAR));
+    public static final RegistryObject<Item> SMALL_CAKE = ITEMS.register("small_cake", () -> new BasicFoodItem(FoodTypes.SMALL_CAKE));
+    public static final RegistryObject<Item> MASHED_POTATO = ITEMS.register("mashed_potato", () -> new BasicFoodItem(FoodTypes.MASHED_POTATO));
 
     public static final RegistryObject<Item> COOKED_MUSHROOM = ITEMS.register("cooked_mushroom", () -> new BasicFoodItem(FoodTypes.COOKED_MUSHROOM));
 
@@ -39,4 +42,10 @@ public class FoodItems {
 
     public static final RegistryObject<Item> RAW_CHOCOLATE = ITEMS.register("raw_chocolate", () -> new BasicItem());
     public static final RegistryObject<Item> HOT_CHOCOLATE = ITEMS.register("hot_chocolate", () -> new BasicFoodItem(FoodTypes.HOT_CHOCOLATE, false, true));
+    public static final RegistryObject<Item> SWEET_BERRY_JUICE = ITEMS.register("sweet_berry_juice", () -> new BasicFoodItem(FoodTypes.SWEET_BERRY_JUICE, false, true));
+    public static final RegistryObject<Item> MELON_JUICE = ITEMS.register("melon_juice", () -> new BasicFoodItem(FoodTypes.MELON_JUICE, false, true));
+    public static final RegistryObject<Item> APPLE_JUICE = ITEMS.register("apple_juice", () -> new BasicFoodItem(FoodTypes.APPLE_JUICE, false, true));
+    public static final RegistryObject<Item> SEA_PICKLE_JUICE = ITEMS.register("sea_pickle_juice", () -> new BasicFoodItem(FoodTypes.SEA_PICKLE_JUICE, false, true));
+    public static final RegistryObject<Item> SUGAR_CANE_JUICE = ITEMS.register("sugar_cane_juice", () -> new BasicFoodItem(FoodTypes.SUGAR_CANE_JUICE, false, true));
+    public static final RegistryObject<Item> CHORUS_FRUIT_JUICE = ITEMS.register("chorus_fruit_juice", ChorusFruitJuiceItem::new);
 }
