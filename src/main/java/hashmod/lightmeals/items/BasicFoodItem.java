@@ -42,7 +42,15 @@ public class BasicFoodItem extends Item {
         ItemStack item = super.onItemUseFinish(stack, worldIn, entityLiving);
         if (!(entityLiving instanceof PlayerEntity) || !((PlayerEntity) entityLiving).abilities.isCreativeMode) {
             if (isSoup) {
-                return new ItemStack(Items.BOWL);
+                if (stack.isEmpty()) {
+                    return new ItemStack(Items.BOWL);
+                } else {
+                    ItemStack itemstack = new ItemStack(Items.BOWL);
+                    PlayerEntity playerentity = (PlayerEntity)entityLiving;
+                    if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
+                        playerentity.dropItem(itemstack, false);
+                    }
+                }
             }
             if (isDrink) {
                 if (stack.isEmpty()) {
