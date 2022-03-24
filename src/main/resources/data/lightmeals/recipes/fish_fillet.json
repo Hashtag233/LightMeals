@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "lightmeals:bacon"
+    "item": "lightmeals:raw_fish_fillet"
   },
-  "result": "lightmeals:crispy_bacon",
+  "result": "lightmeals:fish_fillet",
   "experience": 0.2,
   "cookingtime": 200
 }

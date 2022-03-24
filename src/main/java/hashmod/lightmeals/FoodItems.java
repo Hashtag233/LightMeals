@@ -31,6 +31,9 @@ public class FoodItems {
     public static final RegistryObject<Item> CRISPY_BACON = ITEMS.register("crispy_bacon", () -> new BasicFoodItem(FoodTypes.CRISPY_BACON));
     public static final RegistryObject<Item> HORSE_MEAT = ITEMS.register("horse_meat", () -> new BasicFoodItem(FoodTypes.HORSE_MEAT));
     public static final RegistryObject<Item> COOKED_HORSE_MEAT = ITEMS.register("cooked_horse_meat", () -> new BasicFoodItem(FoodTypes.COOKED_HORSE_MEAT));
+    public static final RegistryObject<Item> FISH_SLICE = ITEMS.register("fish_slice", () -> new BasicFoodItem(FoodTypes.FISH_SLICE));
+    public static final RegistryObject<Item> RAW_FISH_FILLET = ITEMS.register("raw_fish_fillet", () -> new BasicFoodItem(FoodTypes.RAW_FISH_FILLET));
+    public static final RegistryObject<Item> FISH_FILLET = ITEMS.register("fish_fillet", () -> new BasicFoodItem(FoodTypes.FISH_FILLET));
 
     public static final RegistryObject<Item> VEGGIE_SALAD = ITEMS.register("veggie_salad", () -> new BasicFoodItem(FoodTypes.VEGGIE_SALAD, true, false));
 

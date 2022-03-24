@@ -24,6 +24,9 @@ public class FoodTypes {
     public static final Food CRISPY_BACON = (new Food.Builder()).hunger(5).saturation(0.5F).meat().fastToEat().build();
     public static final Food HORSE_MEAT = (new Food.Builder()).hunger(3).saturation(0.3F).meat().build();
     public static final Food COOKED_HORSE_MEAT = (new Food.Builder()).hunger(8).saturation(0.8F).meat().build();
+    public static final Food FISH_SLICE = (new Food.Builder()).hunger(1).saturation(0.1F).build();
+    public static final Food RAW_FISH_FILLET = (new Food.Builder()).hunger(2).saturation(0.2F).build();
+    public static final Food FISH_FILLET = (new Food.Builder()).hunger(5).saturation(0.6F).build();
 
     public static final Food VEGGIE_SALAD = (new Food.Builder()).hunger(13).saturation(1F).build();
 

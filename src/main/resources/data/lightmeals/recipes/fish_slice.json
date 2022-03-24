@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "lightmeals:raw_fish_fillet"
+    }
+  ],
+  "result": {
+    "item": "lightmeals:fish_slice",
+    "count": 2
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "lightmeals:raw_fish_fillet"
+  },
+  "result": "lightmeals:fish_fillet",
+  "experience": 0.2,
+  "cookingtime": 200
+}

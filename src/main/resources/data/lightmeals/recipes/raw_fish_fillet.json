@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mm"
+  ],
+  "key": {
+    "m": {
+      "tag": "minecraft:fishes"
+    }
+  },
+  "result": {
+    "item": "lightmeals:raw_fish_fillet",
+    "count": 3
+  }
+}
