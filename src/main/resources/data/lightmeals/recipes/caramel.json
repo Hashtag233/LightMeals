@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:sugar"
+  },
+  "result": "lightmeals:caramel",
+  "experience": 0.15,
+  "cookingtime": 200
+}

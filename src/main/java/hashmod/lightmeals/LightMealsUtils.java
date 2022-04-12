@@ -1,5 +1,5 @@
 package hashmod.lightmeals;
 
-public class Utils {
+public class LightMealsUtils {
     public static final String MODID = "lightmeals";
 }

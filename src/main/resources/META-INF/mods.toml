@@ -4,11 +4,11 @@ license="MIT License"
 issueTrackerURL="http://my.issue.tracker/"
 [[mods]]
 modId="lightmeals"
-version="0.1"
+version="snapshot220412"
 displayName="Light Meals"
 updateJSONURL="https://gitee.com/hashtag233/mc-mod-services/raw/master/light-meals-upd.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/light-meals"
-logoFile="examplemod.png"
+#logoFile="examplemod.png"
 credits="All credit to Lellson8 for open sourcing his Food Expansion and the full permission. "
 authors="Hashtag233, Ender_Ruier"
 description='''

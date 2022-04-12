@@ -2,9 +2,6 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:bowl"
-    },
-    {
       "item": "minecraft:beetroot"
     },
     {
@@ -18,6 +15,9 @@
     },
     {
       "tag": "forge:mushrooms"
+    },
+    {
+      "item": "lightmeals:plate"
     }
   ],
   "result": {

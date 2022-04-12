@@ -1,6 +1,5 @@
 package hashmod.lightmeals.items;
 
-import hashmod.lightmeals.FoodTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.FoxEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,7 +14,7 @@ import net.minecraft.world.World;
 
 public class ChorusFruitJuiceItem extends BasicFoodItem {
     public ChorusFruitJuiceItem() {
-        super(FoodTypes.CHORUS_FRUIT_JUICE);
+        super(Foods.CHORUS_FRUIT_JUICE);
     }
 
     @Override

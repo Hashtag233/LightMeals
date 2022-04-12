@@ -2,15 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
+      "item": "minecraft:cocoa_beans"
+    },
+    {
       "type": "forge:nbt",
       "item": "minecraft:potion",
       "nbt": "{Potion:'minecraft:water'}"
-    },
-    {
-      "item": "minecraft:cocoa_beans"
-    },
-    {
-      "item": "minecraft:cocoa_beans"
     }
   ],
   "result": {

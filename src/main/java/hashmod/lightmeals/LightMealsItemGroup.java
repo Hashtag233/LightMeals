@@ -1,5 +1,6 @@
 package hashmod.lightmeals;
 
+import hashmod.lightmeals.registry.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -8,12 +9,12 @@ import javax.annotation.Nonnull;
 public class LightMealsItemGroup extends ItemGroup {
 
     public LightMealsItemGroup() {
-        super("light_meal");
+        super(LightMealsUtils.MODID);
     }
 
     @Nonnull
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(FoodItems.VEGGIE_SALAD.get());
+        return new ItemStack(ModItems.VEGGIE_SALAD.get());
     }
 }

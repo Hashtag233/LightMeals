@@ -1,6 +1,5 @@
 package hashmod.lightmeals.items;
 
-import hashmod.lightmeals.FoodTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -10,14 +9,23 @@ import net.minecraft.world.World;
 public class HoneyDipperItem extends BasicFoodItem {
 
     public HoneyDipperItem() {
-        super(FoodTypes.HONEY_DIPPER);
+        super(Foods.HONEY_DIPPER);
     }
 
     @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
+        ItemStack item = super.onItemUseFinish(stack, worldIn, entityLiving);
         if (!(entityLiving instanceof PlayerEntity) || !((PlayerEntity) entityLiving).abilities.isCreativeMode) {
-            return new ItemStack(Items.STICK);
+            if (stack.isEmpty()) {
+                return new ItemStack(Items.STICK);
+            } else {
+                ItemStack itemstack = new ItemStack(Items.STICK);
+                PlayerEntity playerentity = (PlayerEntity) entityLiving;
+                if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
+                    playerentity.dropItem(itemstack, false);
+                }
+            }
         }
-        return super.onItemUseFinish(stack, worldIn, entityLiving);
+        return item;
     }
 }

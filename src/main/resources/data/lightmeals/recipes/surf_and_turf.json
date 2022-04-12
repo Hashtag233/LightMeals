@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:cooked_beef"
+    },
+    {
+      "item": "lightmeals:fish_fillet"
+    },
+    {
+      "item": "lightmeals:plate"
+    }
+  ],
+  "result": {
+    "item": "lightmeals:surf_and_turf"
+  }
+}

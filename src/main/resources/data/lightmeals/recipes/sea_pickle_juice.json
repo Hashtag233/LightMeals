@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+      "item": "minecraft:sea_pickle"
+    },
+    {
+      "item": "minecraft:sea_pickle"
+    },
+    {
       "item": "minecraft:glass_bottle"
-    },
-    {
-      "item": "minecraft:sea_pickle"
-    },
-    {
-      "item": "minecraft:sea_pickle"
     }
   ],
   "result": {

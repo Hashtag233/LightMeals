@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " s ",
+    "sas",
+    " s "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:apple"
+    },
+    "s": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "lightmeals:candied_apple"
+  }
+}

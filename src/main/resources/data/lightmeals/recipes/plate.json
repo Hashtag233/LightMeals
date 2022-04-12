@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "q q",
+    " q "
+  ],
+  "key": {
+    "q": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "item": "lightmeals:plate",
+    "count": 3
+  }
+}

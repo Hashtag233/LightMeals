@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
       "item": "minecraft:bowl"
-    },
-    {
-      "item": "minecraft:dried_kelp"
-    },
-    {
-      "item": "minecraft:dried_kelp"
     }
   ],
   "result": {

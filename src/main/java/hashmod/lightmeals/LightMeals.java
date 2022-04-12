@@ -1,10 +1,10 @@
 package hashmod.lightmeals;
 
+import hashmod.lightmeals.registry.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.passive.horse.HorseEntity;
-import net.minecraft.entity.passive.horse.LlamaEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -19,7 +19,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import java.util.HashMap;
 import java.util.Map;
 
-@Mod(Utils.MODID)
+@Mod(LightMealsUtils.MODID)
 public class LightMeals {
     public static final ItemGroup ITEM_GROUP = new LightMealsItemGroup();
     public static final Map<Class<?>, Drop> DROP_LIST = new HashMap<>();
@@ -32,21 +32,21 @@ public class LightMeals {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onCommonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onClientSetup);
 
-        FoodItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void onCommonSetup(final FMLCommonSetupEvent event) {
 
-        addDrop(SquidEntity.class, FoodItems.RAW_SQUID.get(), FoodItems.COOKED_SQUID.get(), 2);
-        addDrop(HorseEntity.class, FoodItems.HORSE_MEAT.get(), FoodItems.COOKED_HORSE_MEAT.get(), 3, true);
-        //addDrop(BatEntity.class, FoodItems.BAT_WING.get(), FoodItems.COOKED_BAT_WING.get(), 1);
-        //addDrop(WolfEntity.class, FoodItems.WOLF_MEAT.get(), FoodItems.COOKED_WOLF_MEAT.get(), 2, true);
-        //addDrop(OcelotEntity.class, FoodItems.OCELOT_MEAT.get(), FoodItems.COOKED_OCELOT_MEAT.get(), 1, true);
-        //addDrop(ParrotEntity.class, FoodItems.PARROT_MEAT.get(), FoodItems.COOKED_PARROT_MEAT.get(), 1, true);
-        //addDrop(LlamaEntity.class, FoodItems.LLAMA_MEAT.get(), FoodItems.COOKED_LLAMA_MEAT.get(), 2, true);
-        //addDrop(PolarBearEntity.class, FoodItems.POLAR_BEAR_MEAT.get(), FoodItems.COOKED_POLAR_BEAR_MEAT.get(), 3, true);
+        addDrop(SquidEntity.class, ModItems.RAW_SQUID.get(), ModItems.COOKED_SQUID.get(), 2);
+        addDrop(HorseEntity.class, ModItems.HORSE_MEAT.get(), ModItems.COOKED_HORSE_MEAT.get(), 3, true);
+        //addDrop(BatEntity.class, ModItems.BAT_WING.get(), ModItems.COOKED_BAT_WING.get(), 1);
+        //addDrop(WolfEntity.class, ModItems.WOLF_MEAT.get(), ModItems.COOKED_WOLF_MEAT.get(), 2, true);
+        //addDrop(OcelotEntity.class, ModItems.OCELOT_MEAT.get(), ModItems.COOKED_OCELOT_MEAT.get(), 1, true);
+        //addDrop(ParrotEntity.class, ModItems.PARROT_MEAT.get(), ModItems.COOKED_PARROT_MEAT.get(), 1, true);
+        //addDrop(LlamaEntity.class, ModItems.LLAMA_MEAT.get(), ModItems.COOKED_LLAMA_MEAT.get(), 2, true);
+        //addDrop(PolarBearEntity.class, ModItems.POLAR_BEAR_MEAT.get(), ModItems.COOKED_POLAR_BEAR_MEAT.get(), 3, true);
     }
 
     private void onClientSetup(final FMLClientSetupEvent event) {
