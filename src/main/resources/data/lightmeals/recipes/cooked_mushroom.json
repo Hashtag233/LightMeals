@@ -5,5 +5,11 @@
   },
   "result": "lightmeals:cooked_mushroom",
   "experience": 0.15,
-  "cookingtime": 200
+  "cookingtime": 200,
+  "conditions": [
+    {
+      "type": "lightmeals:config_enabled",
+      "config_key": "disableRecipeCookedMushroom"
+    }
+  ]
 }

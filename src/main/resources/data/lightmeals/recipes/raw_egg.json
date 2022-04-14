@@ -8,5 +8,11 @@
   "result": {
     "item": "lightmeals:raw_egg",
     "count": 1
-  }
+  },
+  "conditions": [
+    {
+      "type": "lightmeals:config_enabled",
+      "config_key": "disableRecipeRawEgg"
+    }
+  ]
 }

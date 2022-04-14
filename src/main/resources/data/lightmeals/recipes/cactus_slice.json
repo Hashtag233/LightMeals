@@ -1,15 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "mm"
-  ],
-  "key": {
-    "m": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:cactus"
     }
-  },
+  ],
   "result": {
     "item": "lightmeals:cactus_slice",
-    "count": 6
-  }
+    "count": 3
+  },
+  "conditions": [
+    {
+      "type": "lightmeals:config_enabled",
+      "config_key": "disableRecipeCactusSlice"
+    }
+  ]
 }

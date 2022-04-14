@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "lightmeals:raw_chocolate",
+    "lightmeals:hot_chocolate",
+    "lightmeals:sugar_cane_juice",
+    "lightmeals:apple_juice",
+    "lightmeals:melon_juice",
+    "lightmeals:sweet_berry_juice",
+    "lightmeals:sea_pickle_juice",
+    "lightmeals:chorus_fruit_juice"
+  ]
+}

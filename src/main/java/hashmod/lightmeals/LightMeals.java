@@ -1,17 +1,25 @@
 package hashmod.lightmeals;
 
+import hashmod.lightmeals.config.ConfigHelper;
+import hashmod.lightmeals.config.ConfigHolder;
+import hashmod.lightmeals.crafting.conditions.ConfigEnabledCondition;
 import hashmod.lightmeals.registry.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.passive.*;
+import net.minecraft.entity.passive.SquidEntity;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.crafting.CraftingHelper;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -28,6 +36,8 @@ public class LightMeals {
 
     public LightMeals() {
         instance = this;
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigHolder.COMMON_SPEC);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onCommonSetup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onClientSetup);
@@ -59,6 +69,23 @@ public class LightMeals {
 
     private void addDrop(Class<?> entityClass, Item uncooked, Item cooked, int maxDropAmount, boolean alwaysDrop) {
         DROP_LIST.put(entityClass, new Drop(uncooked, cooked, maxDropAmount, alwaysDrop));
+    }
+
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+    public static class FoodRegistry {
+
+        @SubscribeEvent
+        public static void onModConfig(final ModConfig.ModConfigEvent event) {
+            final ModConfig config = event.getConfig();
+            if (config.getSpec() == ConfigHolder.COMMON_SPEC) {
+                ConfigHelper.bakeCommon(config);
+            }
+        }
+
+        @SubscribeEvent
+        public static void registerRecipeSerializers(final RegistryEvent.Register<IRecipeSerializer<?>> event) {
+            CraftingHelper.register(ConfigEnabledCondition.Serializer.INSTANCE);
+        }
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)

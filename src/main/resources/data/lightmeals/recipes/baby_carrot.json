@@ -1,16 +1,18 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "m",
-    "m"
-  ],
-  "key": {
-    "m": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:carrot"
     }
-  },
+  ],
   "result": {
     "item": "lightmeals:baby_carrot",
-    "count": 4
-  }
+    "count": 2
+  },
+  "conditions": [
+    {
+      "type": "lightmeals:config_enabled",
+      "config_key": "disableRecipeBabyCarrot"
+    }
+  ]
 }
