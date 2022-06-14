@@ -48,9 +48,8 @@ public class LightMeals {
     }
 
     private void onCommonSetup(final FMLCommonSetupEvent event) {
-
-        addDrop(SquidEntity.class, ModItems.RAW_SQUID.get(), ModItems.COOKED_SQUID.get(), 2);
-        addDrop(HorseEntity.class, ModItems.HORSE_MEAT.get(), ModItems.COOKED_HORSE_MEAT.get(), 3, true);
+        addDrop(LightMealsConfig.disableSquidDrop, SquidEntity.class, ModItems.RAW_SQUID.get(), ModItems.COOKED_SQUID.get(), 2);
+        addDrop(LightMealsConfig.disableHorseMeatDrop, HorseEntity.class, ModItems.HORSE_MEAT.get(), ModItems.COOKED_HORSE_MEAT.get(), 3, true);
         //addDrop(BatEntity.class, ModItems.BAT_WING.get(), ModItems.COOKED_BAT_WING.get(), 1);
         //addDrop(WolfEntity.class, ModItems.WOLF_MEAT.get(), ModItems.COOKED_WOLF_MEAT.get(), 2, true);
         //addDrop(OcelotEntity.class, ModItems.OCELOT_MEAT.get(), ModItems.COOKED_OCELOT_MEAT.get(), 1, true);
@@ -63,22 +62,23 @@ public class LightMeals {
 
     }
 
-    private void addDrop(Class<?> entityClass, Item uncooked, Item cooked, int maxDropAmount) {
-        addDrop(entityClass, uncooked, cooked, maxDropAmount, false);
+    private void addDrop(boolean cfgDisable, Class<?> entityClass, Item uncooked, Item cooked, int maxDropAmount) {
+        addDrop(cfgDisable, entityClass, uncooked, cooked, maxDropAmount, false);
     }
 
-    private void addDrop(Class<?> entityClass, Item uncooked, Item cooked, int maxDropAmount, boolean alwaysDrop) {
-        DROP_LIST.put(entityClass, new Drop(uncooked, cooked, maxDropAmount, alwaysDrop));
+    private void addDrop(boolean cfgDisable, Class<?> entityClass, Item uncooked, Item cooked, int maxDropAmount, boolean alwaysDrop) {
+        DROP_LIST.put(entityClass, new Drop(cfgDisable, uncooked, cooked, maxDropAmount, alwaysDrop));
     }
+
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class FoodRegistry {
+    public static class LightMealsRegistry {
 
         @SubscribeEvent
         public static void onModConfig(final ModConfig.ModConfigEvent event) {
             final ModConfig config = event.getConfig();
             if (config.getSpec() == ConfigHolder.COMMON_SPEC) {
-                ConfigHelper.bakeCommon(config);
+                ConfigHelper.configCommon(config);
             }
         }
 
@@ -108,11 +108,12 @@ public class LightMeals {
     }
 
     public static class Drop {
-        public boolean alwaysDrop;
+        public boolean cfgDisable, alwaysDrop;
         public Item uncooked, cooked;
         public int maxDropAmount;
 
-        public Drop(Item uncooked, Item cooked, int maxDropAmount, boolean alwaysDrop) {
+        public Drop(boolean cfgDisable, Item uncooked, Item cooked, int maxDropAmount, boolean alwaysDrop) {
+            this.cfgDisable = cfgDisable;
             this.uncooked = uncooked;
             this.cooked = cooked;
             this.maxDropAmount = maxDropAmount;
@@ -120,9 +121,11 @@ public class LightMeals {
         }
 
         public ItemEntity getDrop(LivingEntity entity) {
-            int count = alwaysDrop ? entity.world.rand.nextInt(maxDropAmount) + 1 : entity.world.rand.nextInt(maxDropAmount + 1);
-            if (count > 0) {
-                return new ItemEntity(entity.world, entity.getPosX(), entity.getPosY() + 0.5D, entity.getPosZ(), new ItemStack(entity.isBurning() ? cooked : uncooked, count));
+            if (!cfgDisable) {
+                int count = alwaysDrop ? entity.world.rand.nextInt(maxDropAmount) + 1 : entity.world.rand.nextInt(maxDropAmount + 1);
+                if (count > 0) {
+                    return new ItemEntity(entity.world, entity.getPosX(), entity.getPosY() + 0.5D, entity.getPosZ(), new ItemStack(entity.isBurning() ? cooked : uncooked, count));
+                }
             }
             return null;
         }

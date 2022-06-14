@@ -1,6 +1,9 @@
 package hashmod.lightmeals;
 
 public final class LightMealsConfig {
+    public static boolean disableHorseMeatDrop;
+    public static boolean disableSquidDrop;
+
     public static boolean disableRecipeBabyCarrot;
     public static boolean disableRecipeBacon;
     public static boolean disableRecipeCactusSlice;

@@ -3,6 +3,9 @@ package hashmod.lightmeals.config;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 final class CommonConfig {
+    final ForgeConfigSpec.BooleanValue disableHorseMeatDrop;
+    final ForgeConfigSpec.BooleanValue disableSquidDrop;
+
     final ForgeConfigSpec.BooleanValue disableRecipeBabyCarrot;
     final ForgeConfigSpec.BooleanValue disableRecipeBacon;
     final ForgeConfigSpec.BooleanValue disableRecipeCactusSlice;
@@ -11,6 +14,9 @@ final class CommonConfig {
     final ForgeConfigSpec.BooleanValue disableRecipeMashedPotato;
     final ForgeConfigSpec.BooleanValue disableRecipeRawEgg;
     final ForgeConfigSpec.BooleanValue disableRecipeRawFishFillet;
+
+    private static final String DISABLEDROP_HorseMeatDrop = "If set to true, horses are not allowed to drop Horse Meat";
+    private static final String DISABLEDROP_SquidDrop = "If set to true, squids are not allowed to drop Squid";
 
     private static final String DISABLERECIPE_BabyCarrot = "Disable Baby Carrot Recipe";
     private static final String DISABLERECIPE_Bacon = "Disable Bacon Recipe";
@@ -22,7 +28,16 @@ final class CommonConfig {
     private static final String DISABLERECIPE_RawFishFillet = "Disable Raw Fish Fillet Recipe";
 
     CommonConfig(final ForgeConfigSpec.Builder builder) {
-        builder.comment("Set to true, to disable the Recipes").push("general.disable_recipes");
+        builder.comment("Set to true, to disable the Mobdrops").push("general.disable_mobdrops");
+        disableHorseMeatDrop = builder
+                .comment(DISABLEDROP_HorseMeatDrop)
+                .define("disableHorseMeatDrop", false);
+        disableSquidDrop = builder
+                .comment(DISABLEDROP_SquidDrop)
+                .define("disableSquidDrop", false);
+        builder.pop();
+
+        builder.comment("Set to true, to disable the Recipes").push("disable_recipes");
         disableRecipeBabyCarrot = builder
                 .comment(DISABLERECIPE_BabyCarrot)
                 .define("disableRecipeBabyCarrot", false);
