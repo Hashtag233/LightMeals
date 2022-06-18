@@ -3,6 +3,7 @@ package hashmod.lightmeals;
 import hashmod.lightmeals.config.ConfigHelper;
 import hashmod.lightmeals.config.ConfigHolder;
 import hashmod.lightmeals.crafting.conditions.ConfigEnabledCondition;
+import hashmod.lightmeals.registry.ModBlocks;
 import hashmod.lightmeals.registry.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
@@ -43,6 +44,7 @@ public class LightMeals {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onClientSetup);
 
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }

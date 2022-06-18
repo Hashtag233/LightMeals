@@ -1,7 +1,9 @@
 package hashmod.lightmeals.registry;
 
+import hashmod.lightmeals.LightMeals;
 import hashmod.lightmeals.LightMealsUtils;
 import hashmod.lightmeals.items.*;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,8 +22,9 @@ public class ModItems {
     public static final RegistryObject<Item> CHOCOLATE_BAR = ITEMS.register("chocolate_bar", () -> new BasicFoodItem(Foods.CHOCOLATE_BAR));
     public static final RegistryObject<Item> SMALL_CAKE = ITEMS.register("small_cake", () -> new BasicFoodItem(Foods.SMALL_CAKE));
     public static final RegistryObject<Item> APPLE_PIE = ITEMS.register("apple_pie", () -> new BasicFoodItem(Foods.APPLE_PIE));
-    public static final RegistryObject<Item> CHORUS_FRUIT_PIE = ITEMS.register("chorus_fruit_pie", ChorusFruitPieItem::new);
+    public static final RegistryObject<Item> SWEET_BERRY_PIE = ITEMS.register("sweet_berry_pie", () -> new BasicFoodItem(Foods.SWEET_BERRY_PIE));
     public static final RegistryObject<Item> FLOWER_PIE = ITEMS.register("flower_pie", () -> new BasicFoodItem(Foods.FLOWER_PIE));
+    public static final RegistryObject<Item> CHORUS_FRUIT_PIE = ITEMS.register("chorus_fruit_pie", ChorusFruitPieItem::new);
     public static final RegistryObject<Item> MASHED_POTATO = ITEMS.register("mashed_potato", () -> new BasicFoodItem(Foods.MASHED_POTATO));
     public static final RegistryObject<Item> CANDIED_APPLE = ITEMS.register("candied_apple", () -> new BasicFoodItem(Foods.CANDIED_APPLE));
 
@@ -46,17 +49,19 @@ public class ModItems {
 
     //汤
     public static final RegistryObject<Item> CARROT_SOUP = ITEMS.register("carrot_soup", () -> new BasicSoupItem(Foods.CARROT_SOUP));
-    public static final RegistryObject<Item> POTATO_SOUP = ITEMS.register("potato_soup", () -> new BasicSoupItem(Foods.POTATO_SOUP));
+    public static final RegistryObject<Item> POTATO_STEW = ITEMS.register("potato_stew", () -> new BasicSoupItem(Foods.POTATO_STEW));
     public static final RegistryObject<Item> PUMPKIN_SOUP = ITEMS.register("pumpkin_soup", () -> new BasicSoupItem(Foods.PUMPKIN_SOUP));
     public static final RegistryObject<Item> KELP_SOUP = ITEMS.register("kelp_soup", () -> new BasicSoupItem(Foods.KELP_SOUP));
     public static final RegistryObject<Item> CHORUS_SOUP = ITEMS.register("chorus_soup", ChorusSoupItem::new);
     public static final RegistryObject<Item> NETHER_FUNGUS_STEW = ITEMS.register("nether_fungus_stew", () -> new BasicSoupItem(Foods.NETHER_FUNGUS_STEW));
     public static final RegistryObject<Item> FISH_SOUP = ITEMS.register("fish_soup", () -> new BasicSoupItem(Foods.FISH_SOUP));
     public static final RegistryObject<Item> BONE_BROTH = ITEMS.register("bone_broth", () -> new BasicSoupItem(Foods.BONE_BROTH));
+    public static final RegistryObject<Item> BLAZE_SOUP = ITEMS.register("blaze_soup", () -> new BasicSoupItem(Foods.BLAZE_SOUP));
 
     //主食
     public static final RegistryObject<Item> PLATE = ITEMS.register("plate", BasicItem::new);
     public static final RegistryObject<Item> VEGGIE_SALAD = ITEMS.register("veggie_salad", () -> new BasicDishItem(Foods.VEGGIE_SALAD));
+    public static final RegistryObject<Item> NETHER_ROOTS_SALAD = ITEMS.register("nether_roots_salad", () -> new BasicDishItem(Foods.NETHER_ROOTS_SALAD));
     public static final RegistryObject<Item> CHICKEN_DINNER = ITEMS.register("chicken_dinner", () -> new BasicDishItem(Foods.CHICKEN_DINNER));
     public static final RegistryObject<Item> SURF_AND_TURF = ITEMS.register("surf_and_turf", () -> new BasicDishItem(Foods.SURF_AND_TURF));
 
@@ -69,4 +74,7 @@ public class ModItems {
     public static final RegistryObject<Item> SEA_PICKLE_JUICE = ITEMS.register("sea_pickle_juice", () -> new BasicDrinkItem(Foods.SEA_PICKLE_JUICE));
     public static final RegistryObject<Item> SUGAR_CANE_JUICE = ITEMS.register("sugar_cane_juice", () -> new BasicDrinkItem(Foods.SUGAR_CANE_JUICE));
     public static final RegistryObject<Item> CHORUS_FRUIT_JUICE = ITEMS.register("chorus_fruit_juice", ChorusFruitJuiceItem::new);
+
+    public static final RegistryObject<Item> HONEY_CAKE = ITEMS.register("honey_cake", () -> new BlockItem(ModBlocks.HONEY_CAKE.get(), new Item.Properties().group(LightMeals.ITEM_GROUP)));
+
 }

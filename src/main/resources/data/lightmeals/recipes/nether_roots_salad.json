@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_roots"
+    },
+    {
+      "item": "minecraft:warped_roots"
+    },
+    {
+      "item": "lightmeals:plate"
+    }
+  ],
+  "result": {
+    "item": "lightmeals:nether_roots_salad"
+  }
+}

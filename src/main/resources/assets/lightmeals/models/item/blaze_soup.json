@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "lightmeals:item/potato_soup"
+    "layer0": "lightmeals:item/blaze_soup"
   }
 }

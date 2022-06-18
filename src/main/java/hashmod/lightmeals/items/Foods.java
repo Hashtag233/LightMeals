@@ -10,9 +10,10 @@ public class Foods {
     public static final Food HONEY_DIPPER = (new Food.Builder()).hunger(4).saturation(0.4F).build();
     public static final Food CHOCOLATE_BAR = (new Food.Builder()).hunger(8).saturation(1F).build();
     public static final Food SMALL_CAKE = (new Food.Builder()).hunger(3).saturation(0.4F).build();
-    public static final Food APPLE_PIE = (new Food.Builder()).hunger(10).saturation(0.8F).build();
-    public static final Food CHORUS_FRUIT_PIE = (new Food.Builder()).hunger(8).saturation(0.8F).setAlwaysEdible().build();
+    public static final Food APPLE_PIE = (new Food.Builder()).hunger(10).saturation(1F).build();
+    public static final Food SWEET_BERRY_PIE = (new Food.Builder()).hunger(8).saturation(0.8F).build();
     public static final Food FLOWER_PIE = (new Food.Builder()).hunger(5).saturation(0.5F).fastToEat().build();
+    public static final Food CHORUS_FRUIT_PIE = (new Food.Builder()).hunger(8).saturation(0.8F).setAlwaysEdible().build();
     public static final Food MASHED_POTATO = (new Food.Builder()).hunger(3).saturation(0.3F).build();
     public static final Food CANDIED_APPLE = (new Food.Builder()).hunger(6).saturation(0.6F).build();
 
@@ -34,15 +35,17 @@ public class Foods {
     public static final Food FISH_FILLET = (new Food.Builder()).hunger(5).saturation(0.6F).build();
 
     public static final Food CARROT_SOUP = (new Food.Builder()).hunger(8).saturation(0.8F).build();
-    public static final Food POTATO_SOUP = (new Food.Builder()).hunger(3).saturation(0.4F).build();
+    public static final Food POTATO_STEW = (new Food.Builder()).hunger(3).saturation(0.4F).build();
     public static final Food PUMPKIN_SOUP = (new Food.Builder()).hunger(6).saturation(0.6F).build();
     public static final Food KELP_SOUP = (new Food.Builder()).hunger(3).saturation(0.3F).build();
     public static final Food CHORUS_SOUP = (new Food.Builder()).hunger(10).saturation(0.8F).setAlwaysEdible().build();
     public static final Food NETHER_FUNGUS_STEW = (new Food.Builder()).hunger(8).saturation(0.8F).build();
     public static final Food FISH_SOUP = (new Food.Builder()).hunger(8).saturation(1F).build();
     public static final Food BONE_BROTH = (new Food.Builder()).hunger(1).saturation(0.2F).setAlwaysEdible().effect(new EffectInstance(Effects.WEAKNESS, 600, 0), 1F).build();
+    public static final Food BLAZE_SOUP = (new Food.Builder()).hunger(6).saturation(0.6F).setAlwaysEdible().effect(new EffectInstance(Effects.FIRE_RESISTANCE, 1800, 0), 1F).build();
 
     public static final Food VEGGIE_SALAD = (new Food.Builder()).hunger(13).saturation(1F).build();
+    public static final Food NETHER_ROOTS_SALAD = (new Food.Builder()).hunger(4).saturation(0.4F).build();
     public static final Food CHICKEN_DINNER = (new Food.Builder()).hunger(13).saturation(1F).build();
     public static final Food SURF_AND_TURF = (new Food.Builder()).hunger(15).saturation(1.2F).build();
 

@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "bites=0": { "model": "lightmeals:block/honey_cake" },
+        "bites=1": { "model": "lightmeals:block/honey_cake_slice1" },
+        "bites=2": { "model": "lightmeals:block/honey_cake_slice2" },
+        "bites=3": { "model": "lightmeals:block/honey_cake_slice3" },
+        "bites=4": { "model": "lightmeals:block/honey_cake_slice4" },
+        "bites=5": { "model": "lightmeals:block/honey_cake_slice5" },
+        "bites=6": { "model": "lightmeals:block/honey_cake_slice6" }
+    }
+}
