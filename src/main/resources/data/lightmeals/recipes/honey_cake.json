@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "hhh",
+    "mem",
+    "www"
+  ],
+  "key": {
+    "h": {
+      "item": "minecraft:honey_bottle"
+    },
+    "m": {
+      "item": "minecraft:milk_bucket"
+    },
+    "w": {
+      "item": "minecraft:wheat"
+    },
+    "e": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "item": "lightmeals:honey_cake"
+  }
+}

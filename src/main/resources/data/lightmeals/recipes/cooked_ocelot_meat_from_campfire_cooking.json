@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "lightmeals:ocelot_meat"
+  },
+  "result": "lightmeals:cooked_ocelot_meat",
+  "experience": 0.35,
+  "cookingtime": 600
+}

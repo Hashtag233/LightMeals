@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lightmeals:wolf_meat"
+  },
+  "result": "lightmeals:cooked_wolf_meat",
+  "experience": 0.35,
+  "cookingtime": 200
+}

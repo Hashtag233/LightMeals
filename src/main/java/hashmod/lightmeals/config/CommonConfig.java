@@ -4,7 +4,9 @@ import net.minecraftforge.common.ForgeConfigSpec;
 
 final class CommonConfig {
     final ForgeConfigSpec.BooleanValue disableHorseMeatDrop;
+    final ForgeConfigSpec.BooleanValue disableOcelotMeatDrop;
     final ForgeConfigSpec.BooleanValue disableSquidDrop;
+    final ForgeConfigSpec.BooleanValue disableWolfMeatDrop;
 
     final ForgeConfigSpec.BooleanValue disableRecipeBabyCarrot;
     final ForgeConfigSpec.BooleanValue disableRecipeBacon;
@@ -16,7 +18,9 @@ final class CommonConfig {
     final ForgeConfigSpec.BooleanValue disableRecipeRawFishFillet;
 
     private static final String DISABLEDROP_HorseMeatDrop = "If set to true, horses are not allowed to drop Horse Meat";
+    private static final String DISABLEDROP_OcelotMeatDrop = "If set to true, ocelots are not allowed to drop Ocelot Meat";
     private static final String DISABLEDROP_SquidDrop = "If set to true, squids are not allowed to drop Squid";
+    private static final String DISABLEDROP_WolfMeatDrop = "If set to true, wolves are not allowed to drop Wolf Meat";
 
     private static final String DISABLERECIPE_BabyCarrot = "Disable Baby Carrot Recipe";
     private static final String DISABLERECIPE_Bacon = "Disable Bacon Recipe";
@@ -32,9 +36,15 @@ final class CommonConfig {
         disableHorseMeatDrop = builder
                 .comment(DISABLEDROP_HorseMeatDrop)
                 .define("disableHorseMeatDrop", false);
+        disableOcelotMeatDrop = builder
+                .comment(DISABLEDROP_OcelotMeatDrop)
+                .define("disableOcelotMeatDrop", false);
         disableSquidDrop = builder
                 .comment(DISABLEDROP_SquidDrop)
                 .define("disableSquidDrop", false);
+        disableWolfMeatDrop = builder
+                .comment(DISABLEDROP_WolfMeatDrop)
+                .define("disableWolfMeatDrop", false);
         builder.pop();
 
         builder.comment("Set to true, to disable the Recipes").push("disable_recipes");

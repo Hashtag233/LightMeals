@@ -7,7 +7,9 @@ public final class ConfigHelper {
 
     public static void configCommon(final ModConfig config) {
         LightMealsConfig.disableHorseMeatDrop = ConfigHolder.COMMON.disableHorseMeatDrop.get();
+        LightMealsConfig.disableOcelotMeatDrop = ConfigHolder.COMMON.disableOcelotMeatDrop.get();
         LightMealsConfig.disableSquidDrop = ConfigHolder.COMMON.disableSquidDrop.get();
+        LightMealsConfig.disableWolfMeatDrop = ConfigHolder.COMMON.disableWolfMeatDrop.get();
 
         LightMealsConfig.disableRecipeBabyCarrot = ConfigHolder.COMMON.disableRecipeBabyCarrot.get();
         LightMealsConfig.disableRecipeBacon = ConfigHolder.COMMON.disableRecipeBacon.get();

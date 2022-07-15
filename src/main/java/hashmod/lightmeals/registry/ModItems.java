@@ -36,16 +36,20 @@ public class ModItems {
     public static final RegistryObject<Item> COOKED_CACTUS_SLICE = ITEMS.register("cooked_cactus_slice", () -> new BasicFoodItem(Foods.COOKED_CACTUS_SLICE));
     public static final RegistryObject<Item> RAW_EGG = ITEMS.register("raw_egg", () -> new BasicFoodItem(Foods.RAW_EGG));
     public static final RegistryObject<Item> FRIED_EGG = ITEMS.register("fried_egg", () -> new BasicFoodItem(Foods.FRIED_EGG));
-    public static final RegistryObject<Item> RAW_SQUID = ITEMS.register("raw_squid", () -> new BasicFoodItem(Foods.RAW_SQUID));
-    public static final RegistryObject<Item> RAW_GLOW_SQUID = ITEMS.register("raw_glow_squid", () -> new BasicFoodItem(Foods.RAW_GLOW_SQUID));
-    public static final RegistryObject<Item> COOKED_SQUID = ITEMS.register("cooked_squid", () -> new BasicFoodItem(Foods.COOKED_SQUID));
     public static final RegistryObject<Item> BACON = ITEMS.register("bacon", () -> new BasicFoodItem(Foods.BACON));
     public static final RegistryObject<Item> CRISPY_BACON = ITEMS.register("crispy_bacon", () -> new BasicFoodItem(Foods.CRISPY_BACON));
-    public static final RegistryObject<Item> HORSE_MEAT = ITEMS.register("horse_meat", () -> new BasicFoodItem(Foods.HORSE_MEAT));
-    public static final RegistryObject<Item> COOKED_HORSE_MEAT = ITEMS.register("cooked_horse_meat", () -> new BasicFoodItem(Foods.COOKED_HORSE_MEAT));
     public static final RegistryObject<Item> FISH_SLICE = ITEMS.register("fish_slice", () -> new BasicFoodItem(Foods.FISH_SLICE));
     public static final RegistryObject<Item> RAW_FISH_FILLET = ITEMS.register("raw_fish_fillet", () -> new BasicFoodItem(Foods.RAW_FISH_FILLET));
     public static final RegistryObject<Item> FISH_FILLET = ITEMS.register("fish_fillet", () -> new BasicFoodItem(Foods.FISH_FILLET));
+    public static final RegistryObject<Item> RAW_SQUID = ITEMS.register("raw_squid", () -> new BasicFoodItem(Foods.RAW_SQUID));
+    public static final RegistryObject<Item> RAW_GLOW_SQUID = ITEMS.register("raw_glow_squid", () -> new BasicFoodItem(Foods.RAW_GLOW_SQUID));
+    public static final RegistryObject<Item> COOKED_SQUID = ITEMS.register("cooked_squid", () -> new BasicFoodItem(Foods.COOKED_SQUID));
+    public static final RegistryObject<Item> HORSE_MEAT = ITEMS.register("horse_meat", () -> new BasicFoodItem(Foods.HORSE_MEAT));
+    public static final RegistryObject<Item> COOKED_HORSE_MEAT = ITEMS.register("cooked_horse_meat", () -> new BasicFoodItem(Foods.COOKED_HORSE_MEAT));
+    public static final RegistryObject<Item> OCELOT_MEAT = ITEMS.register("ocelot_meat", () -> new BasicFoodItem(Foods.OCELOT_MEAT));
+    public static final RegistryObject<Item> COOKED_OCELOT_MEAT = ITEMS.register("cooked_ocelot_meat", () -> new BasicFoodItem(Foods.COOKED_OCELOT_MEAT));
+    public static final RegistryObject<Item> WOLF_MEAT = ITEMS.register("wolf_meat", () -> new BasicFoodItem(Foods.WOLF_MEAT));
+    public static final RegistryObject<Item> COOKED_WOLF_MEAT = ITEMS.register("cooked_wolf_meat", () -> new BasicFoodItem(Foods.COOKED_WOLF_MEAT));
 
     //汤
     public static final RegistryObject<Item> CARROT_SOUP = ITEMS.register("carrot_soup", () -> new BasicSoupItem(Foods.CARROT_SOUP));

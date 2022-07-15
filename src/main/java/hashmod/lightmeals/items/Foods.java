@@ -23,16 +23,20 @@ public class Foods {
     public static final Food COOKED_CACTUS_SLICE = (new Food.Builder()).hunger(3).saturation(0.3F).build();
     public static final Food RAW_EGG = (new Food.Builder()).hunger(1).saturation(0.2F).build();
     public static final Food FRIED_EGG = (new Food.Builder()).hunger(3).saturation(0.4F).build();
-    public static final Food RAW_SQUID = (new Food.Builder()).hunger(1).saturation(0.2F).build();
-    public static final Food RAW_GLOW_SQUID = (new Food.Builder()).hunger(1).saturation(0.2F).setAlwaysEdible().effect(new EffectInstance(Effects.GLOWING, 400, 0), 1F).build();
-    public static final Food COOKED_SQUID = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food BACON = (new Food.Builder()).hunger(1).saturation(0.2F).meat().fastToEat().build();
     public static final Food CRISPY_BACON = (new Food.Builder()).hunger(5).saturation(0.5F).meat().fastToEat().build();
-    public static final Food HORSE_MEAT = (new Food.Builder()).hunger(3).saturation(0.3F).meat().build();
-    public static final Food COOKED_HORSE_MEAT = (new Food.Builder()).hunger(8).saturation(0.8F).meat().build();
     public static final Food FISH_SLICE = (new Food.Builder()).hunger(1).saturation(0.1F).build();
     public static final Food RAW_FISH_FILLET = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food FISH_FILLET = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+    public static final Food RAW_SQUID = (new Food.Builder()).hunger(1).saturation(0.2F).build();
+    public static final Food RAW_GLOW_SQUID = (new Food.Builder()).hunger(1).saturation(0.2F).setAlwaysEdible().effect(new EffectInstance(Effects.GLOWING, 400, 0), 1F).build();
+    public static final Food COOKED_SQUID = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food OCELOT_MEAT = (new Food.Builder()).hunger(2).saturation(0.3F).meat().build();
+    public static final Food COOKED_OCELOT_MEAT = (new Food.Builder()).hunger(6).saturation(0.6F).meat().build();
+    public static final Food WOLF_MEAT = (new Food.Builder()).hunger(2).saturation(0.3F).meat().build();
+    public static final Food COOKED_WOLF_MEAT = (new Food.Builder()).hunger(6).saturation(0.6F).meat().build();
+    public static final Food HORSE_MEAT = (new Food.Builder()).hunger(3).saturation(0.3F).meat().build();
+    public static final Food COOKED_HORSE_MEAT = (new Food.Builder()).hunger(8).saturation(0.8F).meat().build();
 
     public static final Food CARROT_SOUP = (new Food.Builder()).hunger(8).saturation(0.8F).build();
     public static final Food POTATO_STEW = (new Food.Builder()).hunger(3).saturation(0.4F).build();
