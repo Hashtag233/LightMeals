@@ -15,6 +15,6 @@ public class LightMealsItemGroup extends ItemGroup {
     @Nonnull
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(ModItems.VEGGIE_SALAD.get());
+        return new ItemStack(ModItems.SWEET_BERRY_PIE.get());
     }
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "minecraft:turtle_egg"
+  },
+  "result": "lightmeals:cooked_turtle_egg",
+  "experience": 0.35,
+  "cookingtime": 100,
+  "conditions": [
+    {
+      "type": "lightmeals:config_enabled",
+      "config_key": "disableRecipeCookedTurtleEgg"
+    }
+  ]
+}

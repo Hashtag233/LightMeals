@@ -1,15 +1,15 @@
 {
   "type": "minecraft:smoking",
   "ingredient": {
-    "tag": "forge:sugar"
+    "item": "minecraft:scute"
   },
-  "result": "lightmeals:caramel",
+  "result": "lightmeals:cooked_scute",
   "experience": 0.15,
   "cookingtime": 100,
   "conditions": [
     {
       "type": "lightmeals:config_enabled",
-      "config_key": "disableRecipeCaramel"
+      "config_key": "disableRecipeCookedScute"
     }
   ]
 }

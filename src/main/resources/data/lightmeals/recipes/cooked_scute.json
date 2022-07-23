@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:scute"
+  },
+  "result": "lightmeals:cooked_scute",
+  "experience": 0.15,
+  "cookingtime": 200,
+  "conditions": [
+    {
+      "type": "lightmeals:config_enabled",
+      "config_key": "disableRecipeCookedScute"
+    }
+  ]
+}

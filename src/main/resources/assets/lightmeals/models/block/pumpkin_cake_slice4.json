@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "lightmeals:block/pumpkin_cake_side",
+        "bottom": "lightmeals:block/pumpkin_cake_bottom",
+        "top": "lightmeals:block/pumpkin_cake_top",
+        "side": "lightmeals:block/pumpkin_cake_side",
+        "inside": "lightmeals:block/pumpkin_cake_inner"
+    },
+    "elements": [
+        {   "from": [ 9, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

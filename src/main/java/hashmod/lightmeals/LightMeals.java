@@ -4,11 +4,12 @@ import hashmod.lightmeals.config.ConfigHelper;
 import hashmod.lightmeals.config.ConfigHolder;
 import hashmod.lightmeals.crafting.conditions.ConfigEnabledCondition;
 import hashmod.lightmeals.registry.ModBlocks;
+import hashmod.lightmeals.registry.ModCompostChances;
 import hashmod.lightmeals.registry.ModItems;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.passive.*;
-import net.minecraft.entity.passive.horse.HorseEntity;
+import net.minecraft.entity.passive.horse.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -52,12 +53,14 @@ public class LightMeals {
     private void onCommonSetup(final FMLCommonSetupEvent event) {
         addDrop(LightMealsConfig.disableSquidDrop, SquidEntity.class, ModItems.RAW_SQUID.get(), ModItems.COOKED_SQUID.get(), 2);
         addDrop(LightMealsConfig.disableHorseMeatDrop, HorseEntity.class, ModItems.HORSE_MEAT.get(), ModItems.COOKED_HORSE_MEAT.get(), 3, true);
-        //addDrop(BatEntity.class, ModItems.BAT_WING.get(), ModItems.COOKED_BAT_WING.get(), 1);
+        addDrop(LightMealsConfig.disableBatWingsDrop, BatEntity.class, ModItems.BAT_WINGS.get(), ModItems.COOKED_BAT_WINGS.get(), 1);
         addDrop(LightMealsConfig.disableWolfMeatDrop, WolfEntity.class, ModItems.WOLF_MEAT.get(), ModItems.COOKED_WOLF_MEAT.get(), 2, true);
         addDrop(LightMealsConfig.disableOcelotMeatDrop, OcelotEntity.class, ModItems.OCELOT_MEAT.get(), ModItems.COOKED_OCELOT_MEAT.get(), 1, true);
-        //addDrop(ParrotEntity.class, ModItems.PARROT_MEAT.get(), ModItems.COOKED_PARROT_MEAT.get(), 1, true);
-        //addDrop(LlamaEntity.class, ModItems.LLAMA_MEAT.get(), ModItems.COOKED_LLAMA_MEAT.get(), 2, true);
-        //addDrop(PolarBearEntity.class, ModItems.POLAR_BEAR_MEAT.get(), ModItems.COOKED_POLAR_BEAR_MEAT.get(), 3, true);
+        addDrop(LightMealsConfig.disableOcelotMeatDrop, LlamaEntity.class, ModItems.LLAMA_MEAT.get(), ModItems.LLAMA_STEAK.get(), 2, true);
+        addDrop(LightMealsConfig.disablePolarBearMeatDrop, PolarBearEntity.class, ModItems.POLAR_BEAR_MEAT.get(), ModItems.POLAR_BEAR_STEAK.get(), 3, true);
+        addDrop(LightMealsConfig.disableParrotDrop, ParrotEntity.class, ModItems.RAW_PARROT.get(), ModItems.COOKED_PARROT.get(), 2, true);
+
+        ModCompostChances.register();
     }
 
     private void onClientSetup(final FMLClientSetupEvent event) {

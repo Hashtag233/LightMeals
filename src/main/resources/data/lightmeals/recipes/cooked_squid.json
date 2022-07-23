@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "lightmeals:raw_squid"
+    "tag": "forge:raw_squid"
   },
   "result": "lightmeals:cooked_squid",
   "experience": 0.35,

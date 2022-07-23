@@ -40,7 +40,7 @@ public class HoneyCakeBlock extends CakeBlock {
             return ActionResultType.PASS;
         } else {
             player.addStat(Stats.EAT_CAKE_SLICE);
-            player.getFoodStats().addStats(4, 0.3F);
+            player.getFoodStats().addStats(4, 0.2F);
             int i = state.get(BITES);
             if (i < 6) {
                 world.setBlockState(pos, state.with(BITES, i + 1), 3);

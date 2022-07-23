@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lightmeals:raw_parrot"
+  },
+  "result": "lightmeals:cooked_parrot",
+  "experience": 0.35,
+  "cookingtime": 200
+}

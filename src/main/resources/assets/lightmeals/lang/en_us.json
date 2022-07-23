@@ -2,7 +2,7 @@
   "itemGroup.lightmeals": "Light Meals",
   "item.lightmeals.raw_egg": "Raw Egg",
   "item.lightmeals.fried_egg": "Fried Egg",
-  "item.lightmeals.caramel": "Caramel",
+  "item.lightmeals.caramel_ingot": "Caramel Ingot",
   "item.lightmeals.chocolate_bar": "Chocolate Bar",
   "item.lightmeals.cactus_slice": "Cactus Slice",
   "item.lightmeals.cooked_cactus_slice": "Cooked Cactus Slice",
@@ -53,9 +53,9 @@
   "item.lightmeals.hot_chocolate": "Hot Chocolate",
   "item.lightmeals.baby_carrot": "Baby Carrot",
   "item.lightmeals.honey_dipper": "Honey Dipper",
-  "item.lightmeals.small_cake": "Small Cake",
-  "item.lightmeals.pumpkin_cake": "Pumpkin Cake",
-  "item.lightmeals.honey_cake": "Honey Cake",
+  "item.lightmeals.small_cake": "Cake Slice",
+  "block.lightmeals.pumpkin_cake": "Pumpkin Cake",
+  "block.lightmeals.honey_cake": "Honey Cake",
   "item.lightmeals.pudding": "Pudding",
   "item.lightmeals.caramel_pudding": "Caramel Pudding",
   "item.lightmeals.honey_pudding": "Honey Pudding",
@@ -70,5 +70,7 @@
   "item.lightmeals.melon_juice": "Melon Juice",
   "item.lightmeals.sweet_berry_juice": "Sweet Berry Juice",
   "item.lightmeals.sea_pickle_juice": "Sea Pickle Juice",
-  "item.lightmeals.chorus_fruit_juice": "Chorus Fruit Juice"
+  "item.lightmeals.chorus_fruit_juice": "Chorus Fruit Juice",
+  "item.lightmeals.cooked_rabbit_foot": "Cooked Rabbit Foot",
+  "item.lightmeals.glow_ink_soup": "Glow Ink Soup"
 }

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:sweet_berries"
+    },
+    {
+      "item": "minecraft:melon_slice"
+    },
+    {
+      "item": "lightmeals:plate"
+    }
+  ],
+  "result": {
+    "item": "lightmeals:fruit_salad"
+  }
+}

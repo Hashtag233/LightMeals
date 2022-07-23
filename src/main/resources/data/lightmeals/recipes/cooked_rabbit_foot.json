@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:rabbit_foot"
+  },
+  "result": "lightmeals:cooked_rabbit_foot",
+  "experience": 0.35,
+  "cookingtime": 200,
+  "conditions": [
+    {
+      "type": "lightmeals:config_enabled",
+      "config_key": "disableRecipeCookedRabbitFoot"
+    }
+  ]
+}

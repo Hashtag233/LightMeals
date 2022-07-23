@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "lightmeals:bat_wings"
+  },
+  "result": "lightmeals:cooked_bat_wings",
+  "experience": 0.35,
+  "cookingtime": 200
+}

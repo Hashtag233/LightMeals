@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mmm",
+    "sps",
+    "www"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:sugar"
+    },
+    "m": {
+      "item": "minecraft:milk_bucket"
+    },
+    "w": {
+      "item": "minecraft:wheat"
+    },
+    "p": {
+      "item": "minecraft:pumpkin"
+    }
+  },
+  "result": {
+    "item": "lightmeals:honey_cake"
+  }
+}

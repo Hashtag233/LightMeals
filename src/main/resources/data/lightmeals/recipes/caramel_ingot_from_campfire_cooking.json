@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "tag": "forge:sugar"
+  },
+  "result": "lightmeals:caramel_ingot",
+  "experience": 0.15,
+  "cookingtime": 600,
+  "conditions": [
+    {
+      "type": "lightmeals:config_enabled",
+      "config_key": "disableRecipeCaramelIngot"
+    }
+  ]
+}

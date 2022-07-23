@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "lightmeals:llama_meat"
+  },
+  "result": "lightmeals:llama_steak",
+  "experience": 0.35,
+  "cookingtime": 100
+}
