@@ -1,39 +1,45 @@
 package hashmod.lightmeals.items;
 
 import hashmod.lightmeals.LightMeals;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.level.Level;
 
 public class BasicDrinkItem extends Item {
-    public BasicDrinkItem(Food foodType) {
-        super(new Properties().food(foodType).group(LightMeals.ITEM_GROUP).maxStackSize(64));
+    public BasicDrinkItem(FoodProperties foodType) {
+        super(new Item.Properties().food(foodType).tab(LightMeals.ITEM_GROUP).stacksTo(1));
     }
+
     @Override
     public int getUseDuration(ItemStack stack) {
         return super.getUseDuration(stack);
     }
 
     @Override
-    public UseAction getUseAction(ItemStack itemstack) {
-        return UseAction.DRINK;
+    public UseAnim getUseAnimation(ItemStack itemstack) {
+        return UseAnim.DRINK;
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        ItemStack item = super.onItemUseFinish(stack, worldIn, entityLiving);
-        if (!(entityLiving instanceof PlayerEntity) || !((PlayerEntity) entityLiving).abilities.isCreativeMode) {
-            if (stack.isEmpty()) {
-                return new ItemStack(Items.GLASS_BOTTLE);
-            } else {
+    public ItemStack finishUsingItem(ItemStack stack, Level worldIn, LivingEntity entityLiving) {
+        super.finishUsingItem(stack, worldIn, entityLiving);
+
+        if (stack.isEmpty()) {
+            return new ItemStack(Items.GLASS_BOTTLE);
+        } else {
+            if (entityLiving instanceof Player player && !((Player) entityLiving).getAbilities().instabuild) {
                 ItemStack itemstack = new ItemStack(Items.GLASS_BOTTLE);
-                PlayerEntity playerentity = (PlayerEntity) entityLiving;
-                if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
-                    playerentity.dropItem(itemstack, false);
+                if (!player.getInventory().add(itemstack)) {
+                    player.drop(itemstack, false);
                 }
             }
+
+            return stack;
         }
-        return item;
     }
 }

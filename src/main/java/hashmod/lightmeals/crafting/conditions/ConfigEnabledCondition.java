@@ -4,8 +4,8 @@ import com.google.gson.JsonObject;
 
 import hashmod.lightmeals.LightMealsConfig;
 import hashmod.lightmeals.LightMealsUtils;
-import net.minecraft.util.JSONUtils;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.GsonHelper;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionSerializer;
 import org.apache.logging.log4j.LogManager;
@@ -48,7 +48,7 @@ public class ConfigEnabledCondition implements ICondition {
 
         @Override
         public ConfigEnabledCondition read(JsonObject json) {
-            return new ConfigEnabledCondition(JSONUtils.getString(json, "config_key"));
+            return new ConfigEnabledCondition(GsonHelper.getAsString(json, "config_key"));
         }
 
         @Override

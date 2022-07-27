@@ -6,14 +6,16 @@ import hashmod.lightmeals.crafting.conditions.ConfigEnabledCondition;
 import hashmod.lightmeals.registry.ModBlocks;
 import hashmod.lightmeals.registry.ModCompostChances;
 import hashmod.lightmeals.registry.ModItems;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.passive.*;
-import net.minecraft.entity.passive.horse.*;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ambient.Bat;
+import net.minecraft.world.entity.animal.*;
+import net.minecraft.world.entity.animal.horse.Horse;
+import net.minecraft.world.entity.animal.horse.Llama;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
@@ -22,6 +24,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -31,7 +34,7 @@ import java.util.Map;
 
 @Mod(LightMealsUtils.MODID)
 public class LightMeals {
-    public static final ItemGroup ITEM_GROUP = new LightMealsItemGroup();
+    public static final CreativeModeTab ITEM_GROUP = new LightMealsItemGroup();
     public static final Map<Class<?>, Drop> DROP_LIST = new HashMap<>();
 
     public static LightMeals instance;
@@ -51,14 +54,14 @@ public class LightMeals {
     }
 
     private void onCommonSetup(final FMLCommonSetupEvent event) {
-        addDrop(LightMealsConfig.disableSquidDrop, SquidEntity.class, ModItems.RAW_SQUID.get(), ModItems.COOKED_SQUID.get(), 2);
-        addDrop(LightMealsConfig.disableHorseMeatDrop, HorseEntity.class, ModItems.HORSE_MEAT.get(), ModItems.COOKED_HORSE_MEAT.get(), 3, true);
-        addDrop(LightMealsConfig.disableBatWingsDrop, BatEntity.class, ModItems.BAT_WINGS.get(), ModItems.COOKED_BAT_WINGS.get(), 1);
-        addDrop(LightMealsConfig.disableWolfMeatDrop, WolfEntity.class, ModItems.WOLF_MEAT.get(), ModItems.COOKED_WOLF_MEAT.get(), 2, true);
-        addDrop(LightMealsConfig.disableOcelotMeatDrop, OcelotEntity.class, ModItems.OCELOT_MEAT.get(), ModItems.COOKED_OCELOT_MEAT.get(), 1, true);
-        addDrop(LightMealsConfig.disableOcelotMeatDrop, LlamaEntity.class, ModItems.LLAMA_MEAT.get(), ModItems.LLAMA_STEAK.get(), 2, true);
-        addDrop(LightMealsConfig.disablePolarBearMeatDrop, PolarBearEntity.class, ModItems.POLAR_BEAR_MEAT.get(), ModItems.POLAR_BEAR_STEAK.get(), 3, true);
-        addDrop(LightMealsConfig.disableParrotDrop, ParrotEntity.class, ModItems.RAW_PARROT.get(), ModItems.COOKED_PARROT.get(), 2, true);
+        addDrop(LightMealsConfig.disableSquidDrop, Squid.class, ModItems.RAW_SQUID.get(), ModItems.COOKED_SQUID.get(), 2);
+        addDrop(LightMealsConfig.disableHorseMeatDrop, Horse.class, ModItems.HORSE_MEAT.get(), ModItems.COOKED_HORSE_MEAT.get(), 3, true);
+        addDrop(LightMealsConfig.disableBatWingsDrop, Bat.class, ModItems.BAT_WINGS.get(), ModItems.COOKED_BAT_WINGS.get(), 1);
+        addDrop(LightMealsConfig.disableWolfMeatDrop, Wolf.class, ModItems.WOLF_MEAT.get(), ModItems.COOKED_WOLF_MEAT.get(), 2, true);
+        addDrop(LightMealsConfig.disableOcelotMeatDrop, Ocelot.class, ModItems.OCELOT_MEAT.get(), ModItems.COOKED_OCELOT_MEAT.get(), 1, true);
+        addDrop(LightMealsConfig.disableOcelotMeatDrop, Llama.class, ModItems.LLAMA_MEAT.get(), ModItems.LLAMA_STEAK.get(), 2, true);
+        addDrop(LightMealsConfig.disablePolarBearMeatDrop, PolarBear.class, ModItems.POLAR_BEAR_MEAT.get(), ModItems.POLAR_BEAR_STEAK.get(), 3, true);
+        addDrop(LightMealsConfig.disableParrotDrop, Parrot.class, ModItems.RAW_PARROT.get(), ModItems.COOKED_PARROT.get(), 2, true);
 
         ModCompostChances.register();
     }
@@ -80,7 +83,7 @@ public class LightMeals {
     public static class LightMealsRegistry {
 
         @SubscribeEvent
-        public static void onModConfig(final ModConfig.ModConfigEvent event) {
+        public static void onModConfig(final ModConfigEvent event) {
             final ModConfig config = event.getConfig();
             if (config.getSpec() == ConfigHolder.COMMON_SPEC) {
                 ConfigHelper.configCommon(config);
@@ -88,7 +91,7 @@ public class LightMeals {
         }
 
         @SubscribeEvent
-        public static void registerRecipeSerializers(final RegistryEvent.Register<IRecipeSerializer<?>> event) {
+        public static void registerRecipeSerializers(final RegistryEvent.Register<RecipeSerializer<?>> event) {
             CraftingHelper.register(ConfigEnabledCondition.Serializer.INSTANCE);
         }
     }
@@ -98,7 +101,7 @@ public class LightMeals {
 
         @SubscribeEvent
         public static void onLivingDrops(final LivingDropsEvent event) {
-            if (!event.getEntityLiving().isChild()) {
+            if (!event.getEntityLiving().isBaby()) {
                 for (Class<?> entityClass : DROP_LIST.keySet()) {
                     if (entityClass.isInstance(event.getEntityLiving())) {
                         ItemEntity item = DROP_LIST.get(entityClass).getDrop(event.getEntityLiving());
@@ -127,9 +130,9 @@ public class LightMeals {
 
         public ItemEntity getDrop(LivingEntity entity) {
             if (!cfgDisable) {
-                int count = alwaysDrop ? entity.world.rand.nextInt(maxDropAmount) + 1 : entity.world.rand.nextInt(maxDropAmount + 1);
+                int count = alwaysDrop ? entity.level.random.nextInt(maxDropAmount) + 1 : entity.level.random.nextInt(maxDropAmount + 1);
                 if (count > 0) {
-                    return new ItemEntity(entity.world, entity.getPosX(), entity.getPosY() + 0.5D, entity.getPosZ(), new ItemStack(entity.isBurning() ? cooked : uncooked, count));
+                    return new ItemEntity(entity.level, entity.getX(), entity.getY() + 0.5D, entity.getZ(), new ItemStack(entity.isBlocking() ? cooked : uncooked, count));
                 }
             }
             return null;

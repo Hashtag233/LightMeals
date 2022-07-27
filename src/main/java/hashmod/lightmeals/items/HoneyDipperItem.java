@@ -1,10 +1,10 @@
 package hashmod.lightmeals.items;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 
 public class HoneyDipperItem extends BasicFoodItem {
 
@@ -13,19 +13,20 @@ public class HoneyDipperItem extends BasicFoodItem {
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        ItemStack item = super.onItemUseFinish(stack, worldIn, entityLiving);
-        if (!(entityLiving instanceof PlayerEntity) || !((PlayerEntity) entityLiving).abilities.isCreativeMode) {
-            if (stack.isEmpty()) {
-                return new ItemStack(Items.STICK);
-            } else {
+    public ItemStack finishUsingItem(ItemStack stack, Level worldIn, LivingEntity entityLiving) {
+        super.finishUsingItem(stack, worldIn, entityLiving);
+
+        if (stack.isEmpty()) {
+            return new ItemStack(Items.STICK);
+        } else {
+            if (entityLiving instanceof Player player && !((Player)entityLiving).getAbilities().instabuild) {
                 ItemStack itemstack = new ItemStack(Items.STICK);
-                PlayerEntity playerentity = (PlayerEntity) entityLiving;
-                if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
-                    playerentity.dropItem(itemstack, false);
+                if (!player.getInventory().add(itemstack)) {
+                    player.drop(itemstack, false);
                 }
             }
+
+            return stack;
         }
-        return item;
     }
 }

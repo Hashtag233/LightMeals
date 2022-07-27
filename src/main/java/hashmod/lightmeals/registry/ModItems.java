@@ -3,11 +3,11 @@ package hashmod.lightmeals.registry;
 import hashmod.lightmeals.LightMeals;
 import hashmod.lightmeals.LightMealsUtils;
 import hashmod.lightmeals.items.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.RegistryObject;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, LightMealsUtils.MODID);
@@ -95,7 +95,7 @@ public class ModItems {
     public static final RegistryObject<Item> SUGAR_CANE_JUICE = ITEMS.register("sugar_cane_juice", () -> new BasicDrinkItem(Foods.SUGAR_CANE_JUICE));
     public static final RegistryObject<Item> CHORUS_FRUIT_JUICE = ITEMS.register("chorus_fruit_juice", ChorusFruitJuiceItem::new);
 
-    public static final RegistryObject<Item> HONEY_CAKE = ITEMS.register("honey_cake", () -> new BlockItem(ModBlocks.HONEY_CAKE.get(), new Item.Properties().group(LightMeals.ITEM_GROUP)));
-    public static final RegistryObject<Item> PUMPKIN_CAKE = ITEMS.register("pumpkin_cake", () -> new BlockItem(ModBlocks.PUMPKIN_CAKE.get(), new Item.Properties().group(LightMeals.ITEM_GROUP)));
+    public static final RegistryObject<Item> HONEY_CAKE = ITEMS.register("honey_cake", () -> new BlockItem(ModBlocks.HONEY_CAKE.get(), new Item.Properties().tab(LightMeals.ITEM_GROUP)));
+    public static final RegistryObject<Item> PUMPKIN_CAKE = ITEMS.register("pumpkin_cake", () -> new BlockItem(ModBlocks.PUMPKIN_CAKE.get(), new Item.Properties().tab(LightMeals.ITEM_GROUP)));
 
 }

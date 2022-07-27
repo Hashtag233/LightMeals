@@ -1,15 +1,19 @@
 package hashmod.lightmeals.items;
 
 import hashmod.lightmeals.LightMeals;
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.UseAction;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.level.Level;
 
 public class BasicFoodItem extends Item {
 
-    public BasicFoodItem(Food foodType) {
-        super(new Item.Properties().food(foodType).group(LightMeals.ITEM_GROUP).maxStackSize(64));
+    public BasicFoodItem(FoodProperties foodType) {
+        super(new Item.Properties().food(foodType).tab(LightMeals.ITEM_GROUP).stacksTo(64));
     }
 
     @Override
@@ -18,7 +22,7 @@ public class BasicFoodItem extends Item {
     }
 
     @Override
-    public UseAction getUseAction(ItemStack itemstack) {
-        return UseAction.EAT;
+    public UseAnim getUseAnimation(ItemStack itemstack) {
+        return UseAnim.EAT;
     }
 }

@@ -2,16 +2,16 @@ package hashmod.lightmeals.items;
 
 import hashmod.lightmeals.registry.ModItems;
 import hashmod.lightmeals.LightMeals;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Food;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
 public class BasicDishItem extends Item {
-    public BasicDishItem(Food foodType) {
-        super(new Properties().food(foodType).group(LightMeals.ITEM_GROUP).maxStackSize(1));
+    public BasicDishItem(FoodProperties foodType) {
+        super(new Item.Properties().food(foodType).tab(LightMeals.ITEM_GROUP).stacksTo(1));
     }
     @Override
     public int getUseDuration(ItemStack stack) {
@@ -19,19 +19,20 @@ public class BasicDishItem extends Item {
     }
 
     @Override
-    public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        ItemStack item = super.onItemUseFinish(stack, worldIn, entityLiving);
-        if (!(entityLiving instanceof PlayerEntity) || !((PlayerEntity) entityLiving).abilities.isCreativeMode) {
-            if (stack.isEmpty()) {
-                return new ItemStack(ModItems.PLATE.get());
-            } else {
+    public ItemStack finishUsingItem(ItemStack itemStack, Level worldIn, LivingEntity entity) {
+        super.finishUsingItem(itemStack, worldIn, entity);
+
+        if (itemStack.isEmpty()) {
+            return new ItemStack(ModItems.PLATE.get());
+        } else {
+            if (entity instanceof Player player && !((Player)entity).getAbilities().instabuild) {
                 ItemStack itemstack = new ItemStack(ModItems.PLATE.get());
-                PlayerEntity playerentity = (PlayerEntity) entityLiving;
-                if (!playerentity.inventory.addItemStackToInventory(itemstack)) {
-                    playerentity.dropItem(itemstack, false);
+                if (!player.getInventory().add(itemstack)) {
+                    player.drop(itemstack, false);
                 }
             }
+
+            return itemStack;
         }
-        return item;
     }
 }
