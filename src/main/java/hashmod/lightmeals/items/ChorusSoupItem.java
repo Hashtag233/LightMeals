@@ -14,7 +14,7 @@ import net.minecraft.world.level.Level;
 
 public class ChorusSoupItem extends BasicFoodItem {
     public ChorusSoupItem() {
-        super(Foods.CHORUS_FRUIT_JUICE);
+        super(Foods.CHORUS_SOUP);
     }
 
     @Override

@@ -6,6 +6,7 @@ import hashmod.lightmeals.crafting.conditions.ConfigEnabledCondition;
 import hashmod.lightmeals.registry.ModBlocks;
 import hashmod.lightmeals.registry.ModCompostChances;
 import hashmod.lightmeals.registry.ModItems;
+import net.minecraft.world.entity.GlowSquid;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ambient.Bat;
 import net.minecraft.world.entity.animal.*;
@@ -54,12 +55,13 @@ public class LightMeals {
     }
 
     private void onCommonSetup(final FMLCommonSetupEvent event) {
+        addDrop(LightMealsConfig.disableGlowSquidDrop, GlowSquid.class, ModItems.RAW_GLOW_SQUID.get(), ModItems.COOKED_SQUID.get(), 2);
         addDrop(LightMealsConfig.disableSquidDrop, Squid.class, ModItems.RAW_SQUID.get(), ModItems.COOKED_SQUID.get(), 2);
+        addDrop(LightMealsConfig.disableLlamaMeatDrop, Llama.class, ModItems.LLAMA_MEAT.get(), ModItems.LLAMA_STEAK.get(), 2, true);
         addDrop(LightMealsConfig.disableHorseMeatDrop, Horse.class, ModItems.HORSE_MEAT.get(), ModItems.COOKED_HORSE_MEAT.get(), 3, true);
         addDrop(LightMealsConfig.disableBatWingsDrop, Bat.class, ModItems.BAT_WINGS.get(), ModItems.COOKED_BAT_WINGS.get(), 1);
         addDrop(LightMealsConfig.disableWolfMeatDrop, Wolf.class, ModItems.WOLF_MEAT.get(), ModItems.COOKED_WOLF_MEAT.get(), 2, true);
         addDrop(LightMealsConfig.disableOcelotMeatDrop, Ocelot.class, ModItems.OCELOT_MEAT.get(), ModItems.COOKED_OCELOT_MEAT.get(), 1, true);
-        addDrop(LightMealsConfig.disableOcelotMeatDrop, Llama.class, ModItems.LLAMA_MEAT.get(), ModItems.LLAMA_STEAK.get(), 2, true);
         addDrop(LightMealsConfig.disablePolarBearMeatDrop, PolarBear.class, ModItems.POLAR_BEAR_MEAT.get(), ModItems.POLAR_BEAR_STEAK.get(), 3, true);
         addDrop(LightMealsConfig.disableParrotDrop, Parrot.class, ModItems.RAW_PARROT.get(), ModItems.COOKED_PARROT.get(), 2, true);
 

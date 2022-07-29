@@ -2,7 +2,9 @@ package hashmod.lightmeals;
 
 public final class LightMealsConfig {
     public static boolean disableBatWingsDrop;
+    public static boolean disableGlowSquidDrop;
     public static boolean disableHorseMeatDrop;
+    public static boolean disableLlamaMeatDrop;
     public static boolean disableOcelotMeatDrop;
     public static boolean disableParrotDrop;
     public static boolean disablePolarBearMeatDrop;

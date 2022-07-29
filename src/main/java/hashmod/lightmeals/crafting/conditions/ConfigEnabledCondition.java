@@ -1,7 +1,6 @@
 package hashmod.lightmeals.crafting.conditions;
 
 import com.google.gson.JsonObject;
-
 import hashmod.lightmeals.LightMealsConfig;
 import hashmod.lightmeals.LightMealsUtils;
 import net.minecraft.resources.ResourceLocation;

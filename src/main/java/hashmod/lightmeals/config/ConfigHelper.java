@@ -7,6 +7,7 @@ public final class ConfigHelper {
 
     public static void configCommon(final ModConfig config) {
         LightMealsConfig.disableBatWingsDrop = ConfigHolder.COMMON.disableBatWingsDrop.get();
+        LightMealsConfig.disableGlowSquidDrop = ConfigHolder.COMMON.disableGlowSquidDrop.get();
         LightMealsConfig.disableHorseMeatDrop = ConfigHolder.COMMON.disableHorseMeatDrop.get();
         LightMealsConfig.disableOcelotMeatDrop = ConfigHolder.COMMON.disableOcelotMeatDrop.get();
         LightMealsConfig.disableParrotDrop = ConfigHolder.COMMON.disableParrotDrop.get();
