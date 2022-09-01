@@ -10,6 +10,7 @@ public class ModCompostChances {
         ComposterBlock.COMPOSTABLES.put(ModItems.SMALL_CAKE.get(), 0.85F);
         ComposterBlock.COMPOSTABLES.put(ModItems.APPLE_PIE.get(), 1F);
         ComposterBlock.COMPOSTABLES.put(ModItems.SWEET_BERRY_PIE.get(), 1F);
+        ComposterBlock.COMPOSTABLES.put(ModItems.GLOW_BERRY_PIE.get(), 1F);
         ComposterBlock.COMPOSTABLES.put(ModItems.FLOWER_PIE.get(), 1F);
         ComposterBlock.COMPOSTABLES.put(ModItems.CHORUS_FRUIT_PIE.get(), 1F);
         ComposterBlock.COMPOSTABLES.put(ModItems.MASHED_POTATO.get(), 0.85F);
