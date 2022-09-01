@@ -1,5 +1,6 @@
 package hashmod.lightmeals.items;
 
+import hashmod.lightmeals.lists.Foods;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -12,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 
-public class ChorusSoupItem extends BasicFoodItem {
+public class ChorusSoupItem extends BasicSoupItem {
     public ChorusSoupItem() {
         super(Foods.CHORUS_SOUP);
     }

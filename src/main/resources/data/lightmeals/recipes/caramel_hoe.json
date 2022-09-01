@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        " #",
+        " #"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:stick"
+        },
+        "X": {
+            "item": "lightmeals:caramel_ingot"
+        }
+    },
+    "result": {
+        "item": "lightmeals:caramel_hoe"
+    }
+}

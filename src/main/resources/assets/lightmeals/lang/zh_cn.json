@@ -1,5 +1,11 @@
 {
-  "itemGroup.lightmeals": "轻食物语",
+  "item.lightmeals.caramel_knife": "焦糖小刀",
+  "item.lightmeals.caramel_hoe": "焦糖锄",
+  "item.lightmeals.caramel_shovel": "焦糖锹",
+  "item.lightmeals.caramel_pickaxe": "焦糖镐",
+  "item.lightmeals.caramel_axe": "焦糖斧",
+  "item.lightmeals.caramel_sword": "焦糖剑",
+  "item.lightmeals.glow_berry_pie": "发光浆果派",
   "item.lightmeals.raw_egg": "生蛋",
   "item.lightmeals.fried_egg": "煎蛋",
   "item.lightmeals.caramel_ingot": "焦糖锭",
@@ -72,5 +78,9 @@
   "item.lightmeals.sea_pickle_juice": "海泡菜汁",
   "item.lightmeals.chorus_fruit_juice": "紫颂果汁",
   "item.lightmeals.cooked_rabbit_foot": "烤兔子脚",
-  "item.lightmeals.glow_ink_soup": "荧光墨汁汤"
+  "item.lightmeals.glow_ink_soup": "荧光墨汁汤",
+  "itemGroup.lightmeals": "轻食物语",
+  "fluid.lightmeals.caramel": "焦糖",
+  "item.lightmeals.caramel_bucket": "焦糖桶",
+  "material.tconstruct.caramel": "焦糖"
 }

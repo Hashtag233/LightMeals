@@ -7,6 +7,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 
 public class BasicDishItem extends Item {
@@ -34,5 +35,15 @@ public class BasicDishItem extends Item {
 
             return itemStack;
         }
+    }
+
+    @Override
+    public boolean hasContainerItem(ItemStack stack){
+        return true;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack itemStack){
+        return new ItemStack(ModItems.PLATE.get());
     }
 }

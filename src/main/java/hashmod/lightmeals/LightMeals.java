@@ -5,6 +5,7 @@ import hashmod.lightmeals.config.ConfigHolder;
 import hashmod.lightmeals.crafting.conditions.ConfigEnabledCondition;
 import hashmod.lightmeals.registry.ModBlocks;
 import hashmod.lightmeals.registry.ModCompostChances;
+import hashmod.lightmeals.registry.ModFluids;
 import hashmod.lightmeals.registry.ModItems;
 import net.minecraft.world.entity.GlowSquid;
 import net.minecraft.world.entity.LivingEntity;
@@ -50,6 +51,7 @@ public class LightMeals {
 
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }

@@ -1,5 +1,11 @@
 {
-  "itemGroup.lightmeals": "Light Meals",
+  "item.lightmeals.caramel_knife": "Caramel Knife",
+  "item.lightmeals.caramel_hoe": "Caramel Hoe",
+  "item.lightmeals.caramel_shovel": "Caramel Shovel",
+  "item.lightmeals.caramel_pickaxe": "Caramel Pickaxe",
+  "item.lightmeals.caramel_axe": "Caramel Axe",
+  "item.lightmeals.caramel_sword": "Caramel Sword",
+  "item.lightmeals.glow_berry_pie": "Glow Berry Pie",
   "item.lightmeals.raw_egg": "Raw Egg",
   "item.lightmeals.fried_egg": "Fried Egg",
   "item.lightmeals.caramel_ingot": "Caramel Ingot",
@@ -72,5 +78,9 @@
   "item.lightmeals.sea_pickle_juice": "Sea Pickle Juice",
   "item.lightmeals.chorus_fruit_juice": "Chorus Fruit Juice",
   "item.lightmeals.cooked_rabbit_foot": "Cooked Rabbit Foot",
-  "item.lightmeals.glow_ink_soup": "Glow Ink Soup"
+  "item.lightmeals.glow_ink_soup": "Glow Ink Soup",
+  "itemGroup.lightmeals": "Light Meals",
+  "fluid.lightmeals.caramel": "Caramel",
+  "item.lightmeals.caramel_bucket": "Caramel Bucket",
+  "material.tconstruct.caramel": "Caramel"
 }

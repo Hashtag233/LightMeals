@@ -3,14 +3,26 @@ package hashmod.lightmeals.registry;
 import hashmod.lightmeals.LightMeals;
 import hashmod.lightmeals.LightMealsUtils;
 import hashmod.lightmeals.items.*;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import hashmod.lightmeals.lists.Foods;
+import hashmod.lightmeals.lists.MaterialTiers;
+import hashmod.lightmeals.lists.Tags;
+import net.minecraft.world.item.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static hashmod.lightmeals.fluids.CaramelFluid.STILL;
+
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, LightMealsUtils.MODID);
+
+    public static final RegistryObject<Item> CARAMEL_SWORD = ITEMS.register("caramel_sword", () -> new SwordItem(MaterialTiers.CARAMEL, 2, -2.4f, new Item.Properties().tab(LightMeals.ITEM_GROUP)));
+    public static final RegistryObject<Item> CARAMEL_PICKAXE = ITEMS.register("caramel_pickaxe", () -> new PickaxeItem(MaterialTiers.CARAMEL, 0, -2.8f, new Item.Properties().tab(LightMeals.ITEM_GROUP)));
+    public static final RegistryObject<Item> CARAMEL_AXE = ITEMS.register("caramel_axe", () -> new AxeItem(MaterialTiers.CARAMEL, 4, -3.0f, new Item.Properties().tab(LightMeals.ITEM_GROUP)));
+    public static final RegistryObject<Item> CARAMEL_SHOVEL = ITEMS.register("caramel_shovel", () -> new ShovelItem(MaterialTiers.CARAMEL, 0, -2.8f, new Item.Properties().tab(LightMeals.ITEM_GROUP)));
+    public static final RegistryObject<Item> CARAMEL_HOE = ITEMS.register("caramel_hoe", () -> new HoeItem(MaterialTiers.CARAMEL, 0, -2.0f, new Item.Properties().tab(LightMeals.ITEM_GROUP)));
+
+    public static final RegistryObject<Item> CARAMEL_KNIFE = ITEMS.register("caramel_knife", () -> new DiggerItem(0.5F, -2.0F, MaterialTiers.CARAMEL, Tags.MINEABLE_WITH_KNIFE, new Item.Properties().tab(LightMeals.ITEM_GROUP)));
 
     //原料
     public static final RegistryObject<Item> CARAMEL_INGOT = ITEMS.register("caramel_ingot", BasicItem::new);
@@ -24,6 +36,7 @@ public class ModItems {
     public static final RegistryObject<Item> PUDDING = ITEMS.register("pudding", () -> new BasicFoodItem(Foods.PUDDING));
     public static final RegistryObject<Item> APPLE_PIE = ITEMS.register("apple_pie", () -> new BasicFoodItem(Foods.APPLE_PIE));
     public static final RegistryObject<Item> SWEET_BERRY_PIE = ITEMS.register("sweet_berry_pie", () -> new BasicFoodItem(Foods.SWEET_BERRY_PIE));
+    public static final RegistryObject<Item> GLOW_BERRY_PIE = ITEMS.register("glow_berry_pie", () -> new BasicFoodItem(Foods.GLOW_BERRY_PIE));
     public static final RegistryObject<Item> FLOWER_PIE = ITEMS.register("flower_pie", () -> new BasicFoodItem(Foods.FLOWER_PIE));
     public static final RegistryObject<Item> CHORUS_FRUIT_PIE = ITEMS.register("chorus_fruit_pie", ChorusFruitPieItem::new);
     public static final RegistryObject<Item> MASHED_POTATO = ITEMS.register("mashed_potato", () -> new BasicFoodItem(Foods.MASHED_POTATO));
@@ -98,4 +111,5 @@ public class ModItems {
     public static final RegistryObject<Item> HONEY_CAKE = ITEMS.register("honey_cake", () -> new BlockItem(ModBlocks.HONEY_CAKE.get(), new Item.Properties().tab(LightMeals.ITEM_GROUP)));
     public static final RegistryObject<Item> PUMPKIN_CAKE = ITEMS.register("pumpkin_cake", () -> new BlockItem(ModBlocks.PUMPKIN_CAKE.get(), new Item.Properties().tab(LightMeals.ITEM_GROUP)));
 
+    public static final RegistryObject<Item> CARAMEL_BUCKET = ITEMS.register("caramel_bucket", () -> new BucketItem(STILL, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(LightMeals.ITEM_GROUP)));
 }

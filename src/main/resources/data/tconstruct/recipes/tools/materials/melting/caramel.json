@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:material_melting",
+  "input": "tconstruct:caramel",
+  "temperature": 160,
+  "result": {
+    "fluid": "lightmeals:caramel",
+    "amount": 90
+  }
+}

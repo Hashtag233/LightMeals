@@ -42,4 +42,14 @@ public class BasicDrinkItem extends Item {
             return stack;
         }
     }
+
+    @Override
+    public boolean hasContainerItem(ItemStack stack){
+        return true;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack itemStack){
+        return new ItemStack(Items.GLASS_BOTTLE);
+    }
 }

@@ -1,5 +1,6 @@
 package hashmod.lightmeals.items;
 
+import hashmod.lightmeals.lists.Foods;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;

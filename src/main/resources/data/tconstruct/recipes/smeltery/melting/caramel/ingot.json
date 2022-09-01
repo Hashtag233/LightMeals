@@ -1,0 +1,12 @@
+{
+  "type": "tconstruct:melting",
+  "ingredient": {
+    "tag": "forge:ingots/caramel"
+  },
+  "result": {
+    "fluid": "lightmeals:caramel",
+    "amount": 90
+  },
+  "temperature": 160,
+  "time": 36
+}

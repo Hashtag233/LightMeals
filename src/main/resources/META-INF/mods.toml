@@ -4,7 +4,7 @@ license="MIT License"
 issueTrackerURL="https://github.com/Hashtag233/LightMeals/issues"
 [[mods]]
 modId="lightmeals"
-version="1.0"
+version="2.1"
 displayName="Light Meals"
 updateJSONURL="https://gitlab.com/hashmod/services/-/raw/main/light-meals-upd.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/light-meals"
