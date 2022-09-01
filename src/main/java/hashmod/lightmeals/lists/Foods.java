@@ -16,7 +16,7 @@ public class Foods {
     public static final FoodProperties GLOW_BERRY_PIE = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.8F).build();
     public static final FoodProperties FLOWER_PIE = (new FoodProperties.Builder()).nutrition(5).saturationMod(0.5F).fast().build();
     public static final FoodProperties CHORUS_FRUIT_PIE = (new FoodProperties.Builder()).nutrition(8).saturationMod(0.8F).alwaysEat().build();
-    public static final FoodProperties MASHED_POTATO = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).build();
+    public static final FoodProperties MASHED_POTATO = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F).build();
     public static final FoodProperties CANDIED_APPLE = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.6F).build();
 
     public static final FoodProperties COOKED_MUSHROOM = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.3F).build();
