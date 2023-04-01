@@ -17,10 +17,8 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.crafting.CraftingHelper;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -30,6 +28,8 @@ import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegisterEvent;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -52,6 +52,7 @@ public class LightMeals {
         ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModFluids.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModFluids.FLUID_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -95,8 +96,10 @@ public class LightMeals {
         }
 
         @SubscribeEvent
-        public static void registerRecipeSerializers(final RegistryEvent.Register<RecipeSerializer<?>> event) {
-            CraftingHelper.register(ConfigEnabledCondition.Serializer.INSTANCE);
+        public static void registerSerializers(RegisterEvent event) {
+            event.register(ForgeRegistries.Keys.RECIPE_SERIALIZERS,
+                helper -> CraftingHelper.register(ConfigEnabledCondition.Serializer.INSTANCE)
+            );
         }
     }
 
@@ -105,10 +108,10 @@ public class LightMeals {
 
         @SubscribeEvent
         public static void onLivingDrops(final LivingDropsEvent event) {
-            if (!event.getEntityLiving().isBaby()) {
+            if (!event.getEntity().isBaby()) {
                 for (Class<?> entityClass : DROP_LIST.keySet()) {
-                    if (entityClass.isInstance(event.getEntityLiving())) {
-                        ItemEntity item = DROP_LIST.get(entityClass).getDrop(event.getEntityLiving());
+                    if (entityClass.isInstance(event.getEntity())) {
+                        ItemEntity item = DROP_LIST.get(entityClass).getDrop(event.getEntity());
                         if (item != null) {
                             event.getDrops().add(item);
                         }
