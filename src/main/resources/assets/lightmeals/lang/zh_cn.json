@@ -80,7 +80,8 @@
   "item.lightmeals.cooked_rabbit_foot": "烤兔子脚",
   "item.lightmeals.glow_ink_soup": "荧光墨汁汤",
   "itemGroup.lightmeals": "轻食物语",
-  "fluid.lightmeals.caramel": "焦糖",
+  "block.lightmeals.caramel_block": "焦糖",
+  "fluid_type.lightmeals.caramel": "焦糖",
   "item.lightmeals.caramel_bucket": "焦糖桶",
   "material.tconstruct.caramel": "焦糖"
 }

@@ -23,7 +23,7 @@ public class ConfigEnabledCondition implements ICondition {
     }
 
     @Override
-    public boolean test() {
+    public boolean test(IContext context) {
         try {
             return !LightMealsConfig.class.getField(config_key).getBoolean(null);
         } catch (IllegalAccessException | NoSuchFieldException e) {
